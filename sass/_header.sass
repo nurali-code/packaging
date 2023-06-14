@@ -1,0 +1,84 @@
+.header
+    background-color: $bg
+    color: #fff
+    padding: 19px 0
+    a
+        color: #fff
+    
+    &-top,
+    &-middle,
+    &-bottom,
+    nav
+        max-width: 1300px
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &-item
+        display: flex
+        align-items: center
+        a
+            display: inline-block
+            margin-right: 12px
+        img
+            width: 24px
+            margin-right: 12px
+    
+    &-middle
+        padding: 8px 0 18px
+
+    nav
+        width: 90%
+        margin: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 932px
+        a
+            font-weight: 400
+            font-size: 20px
+            line-height: 150%
+            padding: 8px 24px
+            border-radius: 8px
+            &.active
+                background-color: $third
+            &:hover
+                opacity: 1
+                background-color: rgba($third, .5)
+
+    .logo
+        font-weight: 600
+        font-size: 24px
+        line-height: 150%
+
+    .search
+        margin: 0 20px 0 auto 
+        width: 846px
+        max-width: 80%
+        position: relative
+        input
+            margin: 0
+            box-sizing: border-box
+            width: 100%
+
+        button
+            position: absolute
+            top: 0
+            right: 0
+            width: 70px
+            height: 100%
+            background-image: url('../img/search.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            border-radius: $b-radius
+
+.social
+    a
+        display: inline-block
+        padding: 0 6px
+    img
+        width: 26px
+        display: block
+        border-radius: 50%
+        box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.2)
