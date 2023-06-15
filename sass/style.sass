@@ -1,8 +1,304 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'slick'
 @import 'modal'
 
-.main
-    
+.hero
+    overflow: hidden
+    width: 100%
+    &-item
+        padding: 120px 0
+        position: relative
+        z-index: 1
+        color: #fff
+        h1, h2, h3, p
+            text-align: left
+            max-width: 900px
+
+        p
+            font-size: 32px
+            margin-bottom: 60px
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        object-fit: cover
+        z-index: -1
+        width: 100%
+        height: 100%
+
+.product
+    width: 390px
+    padding-bottom: 26px
+    text-align: left
+    border: 1px solid rgba(9, 43, 14, 0.3)
+    background: rgba(243, 247, 249, 0.99)
+    border-radius: 12px
+    overflow: hidden
+    display: inline-flex !important
+    flex-direction: column
+    &-wrap
+        gap: 40px 65px
+        margin-bottom: 40px
+
+    .new
+        background-color: $bg
+        color: #fff
+    .discount
+        color: #fff
+        background-color: $red
+    .new,
+    .discount,
+    .in_stock
+        padding: 6px 16px
+        border-radius: $b-radius
+
+    .in_stock
+        background-color: #E2EDFF
+        background-image: url('../img/check.svg')
+        background-repeat: no-repeat
+        background-position: center left 8px
+        background-size: 18px auto
+        padding-left: 32px
+        position: absolute
+        left: 24px
+        bottom: 24px
+
+    &-img
+        height: 280px
+        padding: 24px
+        position: relative
+        z-index: 1
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            transition: .3s ease all
+
+    .wrap
+        margin-top: auto
+        padding: 0 20px 0
+        .btn
+            width: 100%
+            &_outline,
+            &_second
+                margin-top: 15px
+                width: 48.5%
+                padding: 12px 12px 11px
+
+    &-title
+        padding: 20px
+
+    &__heading
+        font-weight: 500
+        font-size: 24px
+        margin: 0 0 16px
+
+    &__price
+        font-weight: 400
+        font-size: 22px
+        line-height: 32px
+        color: $third
+        margin-bottom: 16px
+        i
+            font-style: normal
+            font-size: 28px
+            font-weight: 500
+
+    &__link,
+    &__list
+        display: block
+        color: $bg
+        font-weight: 400
+        font-size: 19px
+        line-height: 150%
+        margin-bottom: 4px
+
+    &__link
+        &::after
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            background-image: url('../img/dobble-arrow.svg')
+            background-repeat: no-repeat
+            background-position: center right
+            background-size: contain
+            vertical-align: middle
+
+    &:hover
+        img
+            transform: scale(1.1) rotate(-1deg)
+
+    &-slider
+        overflow: hidden
+        position: relative
+        max-width: 1400px
+        margin: 0 auto
+        &::before,
+        &::after
+            content: ''
+            display: block
+            width: 0px
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1
+            pointer-events: none
+            background-color: #fff
+            box-shadow: 0 0 20px 30px #E2EDFF
+            // box-shadow: 0 0 30px 40px red
+        &::after
+            left: auto
+            right: 0
+
+        .product
+            background-color: #fff
+            margin: 0 32px
+
+        .slick
+            // &-slide
+            //     opacity: 0
+            //     visibility: hidden
+            //     transition: .2s ease all
+            // &-active
+            //     opacity: 1
+            //     visibility: visible
+            &-track,
+            &-list
+                display: flex
+                align-items: stretch
+            &-dots
+                button
+                    background-color: #fff
+
+.connect
+    padding: 85px 0
+    background-color: $bg
+    background-image: url('../img/connect.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    color: #fff
+    .col
+        max-width: 400px
+        margin: 0 0 0 auto
+
+    h2
+        margin-bottom: 16px
+
+    p
+        font-weight: 500
+        font-size: 20px
+        line-height: 150%
+        margin-bottom: 16px
+
+    input
+        border-color: $third
+        border-radius: 12px
+
+    .descr
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        text-align: left
+        i
+            font-style: normal
+            color: $black
+
+    .btn
+        width: 100%
+
+.features
+    .wrap
+        gap: 20px 1%
+        align-items: flex-start
+    &-item
+        width: 24%
+        padding: 24px
+    &-img
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin: 0 auto 20px
+        background-color: $bg
+        img
+            width: 45%
+
+    &__heading
+        font-weight: 500
+        font-size: 22px
+        line-height: 32px
+        margin-bottom: 8px
+
+    &__text
+        font-weight: 400
+        font-size: 20px
+
+.about
+    .wrap
+        align-items: flex-start
+    &-title,
+    &__img
+        text-align: left
+        width: 50%
+    &__img
+        width: 46%
+        display: block
+        border-radius: $b-radius
+
+.news
+    width: 390px
+    padding-bottom: 26px
+    text-align: left
+    border: 1px solid rgba(9, 43, 14, 0.3)
+    background: rgba(243, 247, 249, 0.99)
+    border-radius: 12px
+    overflow: hidden
+    display: inline-flex !important
+    flex-direction: column
+    &-img
+        height: 172px
+        position: relative
+        z-index: 1
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            transition: .3s ease all
+
 @import 'footer'
+
+@media screen and ( max-width: 1460px )
+    .hero
+        &-item
+            padding: 100px 0
+
+    .product
+        &-wrap
+            gap: 40px 25px
+
+        &-slider
+            max-width: 1260px
+            &::before,
+            &::after
+                // box-shadow: 0 0 20px 30px #E2EDFF
+                box-shadow: 0 0 15px 9px #E2EDFF
+            .product
+                margin: 0 12px

@@ -4,36 +4,36 @@
     padding: 19px 0
     a
         color: #fff
-    
+
     &-top,
     &-middle,
     &-bottom,
     nav
         max-width: 1300px
         margin: 0 auto
+    &-top,
+    &-middle,
+    &-bottom,
+    &-item,
+    nav
         display: flex
         align-items: center
         justify-content: space-between
 
     &-item
-        display: flex
-        align-items: center
         a
             display: inline-block
             margin-right: 12px
         img
             width: 24px
             margin-right: 12px
-    
+
     &-middle
         padding: 8px 0 18px
 
     nav
         width: 90%
         margin: 0
-        display: flex
-        justify-content: space-between
-        align-items: center
         max-width: 932px
         a
             font-weight: 400
@@ -53,7 +53,7 @@
         line-height: 150%
 
     .search
-        margin: 0 20px 0 auto 
+        margin: 0 20px 0 auto
         width: 846px
         max-width: 80%
         position: relative
@@ -61,6 +61,7 @@
             margin: 0
             box-sizing: border-box
             width: 100%
+            border: none
 
         button
             position: absolute
@@ -72,6 +73,10 @@
             background-repeat: no-repeat
             background-position: center center
             border-radius: $b-radius
+
+    .btn
+        &-menu
+            display: none
 
 .social
     a
