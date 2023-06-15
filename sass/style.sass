@@ -87,14 +87,14 @@
         padding: 0 20px 0
         .btn
             width: 100%
+            margin-top: 15px
             &_outline,
             &_second
-                margin-top: 15px
                 width: 48.5%
                 padding: 12px 12px 11px
 
     &-title
-        padding: 20px
+        padding: 20px 20px 0
 
     &__heading
         font-weight: 500
@@ -222,8 +222,8 @@
         gap: 20px 1%
         align-items: flex-start
     &-item
-        width: 24%
-        padding: 24px
+        width: 23%
+
     &-img
         display: flex
         align-items: center
@@ -259,15 +259,12 @@
         border-radius: $b-radius
 
 .news
-    width: 390px
-    padding-bottom: 26px
+    width: 376px
     text-align: left
     border: 1px solid rgba(9, 43, 14, 0.3)
     background: rgba(243, 247, 249, 0.99)
     border-radius: 12px
     overflow: hidden
-    display: inline-flex !important
-    flex-direction: column
     &-img
         height: 172px
         position: relative
@@ -282,6 +279,37 @@
             left: 0
             z-index: -1
             transition: .3s ease all
+
+    &-wrap
+        gap: 40px 86px
+        margin-bottom: 40px
+
+    &-title
+        display: block
+        padding: 8px 20px 15px
+
+    &__time
+        font-weight: 400
+        font-size: 14px
+        line-height: 120%
+        margin-bottom: 4px
+
+    &__heading
+        font-weight: 600
+        font-size: 20px
+        line-height: 23px
+        margin-bottom: 6px
+        color: $prime
+
+    &__text
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        margin: 0
+
+    &:hover
+        img
+            transform: scale(1.1) rotate(-1deg)
 
 @import 'footer'
 
@@ -302,3 +330,6 @@
                 box-shadow: 0 0 15px 9px #E2EDFF
             .product
                 margin: 0 12px
+    .news
+        &-wrap
+            gap: 40px 46px
