@@ -1,38 +1,31 @@
 .header
     background-color: $bg
     color: #fff
-    padding: 19px 0
+    padding: 19px 30px 30px
     a
         color: #fff
 
     &-top,
     &-middle,
-    &-bottom,
-    nav
-        max-width: 1300px
+    &-bottom
+        max-width: 1310px
         margin: 0 auto
     &-top,
     &-middle,
     &-bottom,
-    &-item,
-    nav
+    .navbar
         display: flex
         align-items: center
         justify-content: space-between
 
-    &-item
-        a
-            display: inline-block
-            margin-right: 12px
-        img
-            width: 24px
-            margin-right: 12px
+    .connect
+        margin: 0
 
     &-middle
-        padding: 8px 0 18px
+        padding: 10px 0 18px
 
-    nav
-        width: 90%
+    .navbar
+        width: 77%
         margin: 0
         max-width: 932px
         a
@@ -47,15 +40,11 @@
                 opacity: 1
                 background-color: rgba($third, .5)
 
-    .logo
-        font-weight: 600
-        font-size: 24px
-        line-height: 150%
-
     .search
-        margin: 0 20px 0 auto
-        width: 846px
-        max-width: 80%
+        margin: 0 24px 0 auto
+        padding-left: 24px
+        width: 870px
+        max-width: 71%
         position: relative
         input
             margin: 0
@@ -72,9 +61,12 @@
             background-image: url('../img/search.svg')
             background-repeat: no-repeat
             background-position: center center
+            background-size: auto 60%
             border-radius: $b-radius
 
     .btn
+        &-catalogue
+            width: 23%
         &-menu
             display: none
 
@@ -87,3 +79,99 @@
         display: block
         border-radius: 50%
         box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.2)
+
+@media screen and ( max-width: 1200px )
+    .header
+        padding: 12px 30px 16px
+        .connect
+            display: none
+            margin: 0 16px 0 auto
+            img
+                display: none
+
+            &.phone
+                display: block
+
+        .navbar
+            display: none
+
+        .search
+            margin: 0 auto
+            padding: 0 16px
+            button
+                right: 16px
+
+        &-middle
+            padding: 0 0 10px
+
+        .logo
+            position: absolute
+            top: 16px
+            left: 89px
+
+        .btn
+            &-menu
+                display: inline-block
+
+        .search
+            input
+                height: 33px
+
+            button
+                width: 50px
+
+    .social
+        a
+            padding: 0 4px
+        img
+            width: 24px
+
+@media screen and ( max-width: 700px )
+    .header
+        padding: 11px 15px 16px
+        .connect
+            display: none !important
+
+        .social
+            display: none
+
+        .logo
+            top: 15px
+            width: 62%
+            text-align: center
+            left: 50%
+            transform: translateX(-50%)
+
+        &-middle
+            padding: 0 0 12px
+
+        .btn
+            &-cart
+                width: 36px
+                height: 30px
+                position: absolute
+                top: 12px
+                right: 15px
+                background-size: 75%
+                background-position: center left 2px
+                background-color: transparent
+                border-radius: 0
+                background-image: url('../img/cart_white.svg')
+                &::before
+                    top: 0px
+                    right: 0px
+            &-catalogue
+                font-size: 12px
+                width: 26%
+                padding: 7px 10px 5px
+                img
+                    display: none
+
+        .search
+            max-width: 70%
+            padding: 0
+            margin: 0
+            input
+                height: 28px
+            button
+                right: 0

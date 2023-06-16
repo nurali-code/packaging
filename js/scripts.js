@@ -25,7 +25,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: false,
     });
-    $('.product-slider').slick({
+    $('.slider').slick({
         dots: true,
         arrows: false,
         infinite: true,
@@ -36,6 +36,18 @@ $(document).ready(function () {
         centerMode: true,
         slidesToScroll: 1,
         variableWidth: true,
+    });
+    $('.clients-slider').slick({
+        dots: true,
+        arrows: false,
+        rows: 2,
+        infinite: true,
+        speed: 300,
+        centerPadding: '',
+        slidesToShow: 3,
+        swipeToSlide: true,
+        slidesToScroll: 1,
+        variableWidth: false,
     });
 
     /*---------------------------------------------------end*/
