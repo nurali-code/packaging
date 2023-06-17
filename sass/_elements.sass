@@ -283,34 +283,34 @@ textarea
     font-size: 24px
     line-height: 150%
 
-.slider
-    overflow: hidden
-    position: relative
-    max-width: 1340px
-    margin: 0 auto
-    &::before,
-    &::after
-        content: ''
-        display: block
-        width: 0px
-        height: 100%
-        position: absolute
-        top: 0
-        left: 0
-        z-index: 1
-        pointer-events: none
-        background-color: #fff
-        box-shadow: 0 0 20px 30px #fff
-        // box-shadow: 0 0 30px 40px red
-    &::after
-        left: auto
-        right: 0
+.slick-slider
+    &.shadow
+        overflow: hidden
+        position: relative
+        margin: 0 auto
+        &::before,
+        &::after
+            content: ''
+            display: block
+            width: 0px
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1
+            pointer-events: none
+            background-color: #fff
+            box-shadow: 0 0 20px 30px #fff
+            // box-shadow: 0 0 30px 40px red
+        &::after
+            left: auto
+            right: 0
 
-    .slick
-        &-track,
-        &-list
-            display: flex
-            align-items: stretch
+        .slick
+            &-track,
+            &-list
+                display: flex
+                align-items: stretch
 
 .bg
     .slick-slider
@@ -425,3 +425,9 @@ textarea
 
     .container
         padding: 0 16px
+
+    .slick-slider
+        &.shadow
+            &::before,
+            &::after
+                display: none

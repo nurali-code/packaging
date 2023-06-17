@@ -33,6 +33,7 @@ $(document).ready(function () {
             },
         ]
     });
+
     $('.product-mobSlider').slick({
         dots: true,
         arrows: false,
@@ -53,7 +54,7 @@ $(document).ready(function () {
         ]
     });
 
-    $('.slider').slick({
+    $('.product-slider').slick({
         dots: true,
         arrows: false,
         infinite: true,
@@ -89,6 +90,7 @@ $(document).ready(function () {
             },
         ]
     });
+
     $('.certificates-slider').slick({
         dots: true,
         arrows: false,
@@ -113,6 +115,7 @@ $(document).ready(function () {
             },
         ]
     });
+
     $('.clients-slider').slick({
         dots: true,
         arrows: false,
