@@ -1,5 +1,5 @@
 .modal
-    display: none
+    // display: none
     position: fixed
     top: 0
     left: 0
@@ -12,7 +12,7 @@
     &-content
         width: 94%
         min-height: 100px
-        max-height: 98%
+        max-height: 95%
         display: block
         position: absolute
         top: 50%
@@ -23,8 +23,8 @@
         overflow-y: scroll
         color: $black
         text-align: left
-        padding: 50px 
-        border-radius: 60px
+        padding: 50px
+        border-radius: 12px
         -ms-overflow-style: none
         scrollbar-width: none
         &::-webkit-scrollbar
@@ -32,36 +32,12 @@
             width: 0
             height: 0
 
-        h3
-            
-            font-size: 28px
-            text-align: center
-            margin-bottom: 25px
-
-        p
-            margin: 0
-
-        .wrap
-            margin-bottom: 10px
-            fieldset
-                width: 49%
-        .btn
-            margin-top: 5px
-            min-width: 48%
-
-        .inp-wrap
-            margin-bottom: 15px
-            width: 100%
-            input
-                margin: 0
-
     &-close
         position: absolute
         top: 22px
         right: 32px
         border-radius: 50%
         font-size: 19px
-        background-color: rgba($black, .2)
         color: $black
         width: 36px
         line-height: 38px
@@ -73,6 +49,58 @@
 
     &.is-open
         display: block
+
+    &-catalogue
+        .modal
+            &-content
+                max-width: 1300px
+                padding: 80px
+
+        h2
+            display: none
+
+        h3
+            font-weight: 500
+            font-size: 24px
+            line-height: 32px
+            margin: 0 0 16px
+
+        .wrap
+            gap: 40px 0
+            align-items: flex-start
+
+        ul
+            padding: 0
+            margin: 0
+            list-style: none
+            li
+                font-weight: 400
+                font-size: 18px
+                line-height: 150%
+                padding: 0 0 0 20px
+                position: relative
+                z-index: 1
+                &::before
+                    content: ''
+                    display: block
+                    width: 6px
+                    height: 6px
+                    border-radius: 50%
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 4px
+                    background-color: $prime
+
+            a 
+                padding: 6px 0
+                display: block
+
+        .item
+            width: 32%
+
+        .btn
+            display: none
 
     @media screen and ( max-width: 1170px )
         &-content
@@ -106,14 +134,3 @@
             right: 16px
             line-height: 25px
             font-size: 14px
-
-@keyframes slideRight
-    0%
-        transform: translateX(-100%)
-    100%
-        transform: translateX(0%)
-@keyframes slideRightOut
-    0%
-        transform: translateX(0%)
-    100%
-        transform: translateX(-100%)

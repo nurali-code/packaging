@@ -51,7 +51,8 @@
             </nav>
         </div>
         <div class="header-bottom">
-            <button class="btn btn-catalogue">Каталог <img src="img/arrow-down.svg" alt=""> </button>
+            <button class="btn btn-catalogue" data-modal="modal-catalogue">Каталог <img src="img/arrow-down.svg" alt="">
+            </button>
             <form class="search">
                 <input type="search" placeholder="Поиск">
                 <button type="submit"></button>
@@ -674,21 +675,102 @@
         </p>
     </footer>
 
-    <div class="modal" id="modal-form">
+    <div class="modal modal-catalogue" id="modal-catalogue">
         <div class="modal-content">
             <button class="modal-close">&#x2715;</button>
-            <h3>Подать <b>заявку</b></h3>
-            <form action="./sendmail.php" method="post">
-                <fieldset>
-                    <label>Как вас зовут <i>*</i></label>
-                    <input type="text" required placeholder="Как вас зовут?">
-                </fieldset>
-                <fieldset>
-                    <label>Номер телефона <i>*</i></label>
-                    <input type="tel" required placeholder="Ваш номер телефона">
-                </fieldset>
-                <button type="submit" class="btn">подать заявку</button>
-            </form>
+            <h2>Каталог</h2>
+            <div class="wrap">
+                <div class="item">
+                    <h3>Гибкая упаковка</h3>
+                    <ul>
+                        <li><a href="#">Печать БОПП, СПП, ПВД, ПНД</a></li>
+                        <li><a href="#">Печать с ламинацией</a></li>
+                        <li><a href="#">Продажа и резка пленки БОПП, СПП</a></li>
+                        <li><a href="#">Полистирол и полимерные материалы </a></li>
+                        <li><a href="#">Межслойная печать</a></li>
+                        <li><a href="#">Широкорулонная флексопечать</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3> Гофротара</h3>
+                    <ul>
+                        <li><a href="#">Четырехклапанные короба</a></li>
+                        <li><a href="#">Короба со сложной высечкой </a></li>
+                        <li><a href="#">Печать по гофрокартону</a></li>
+                        <li><a href="#">Четырехклапанные короба</a></li>
+                        <li><a href="#">Короба со сложной высечкой </a></li>
+                        <li><a href="#">Печать по гофрокартону</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Бумажные и крафт-пакеты</h3>
+                    <ul>
+                        <li><a href="#">Пакеты для строительных смесей</a></li>
+                        <li><a href="#">Пакеты для угля</a></li>
+                        <li><a href="#">Пакеты для наполнителя</a></li>
+                        <li><a href="#">Пакеты для строительных смесей</a></li>
+                        <li><a href="#">Пакеты для угля</a></li>
+                        <li><a href="#">Пакеты для наполнителя</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Ламинатная туба</h3>
+                    <ul>
+                        <li><a href="#">Печать тубного ламината</a></li>
+                        <li><a href="#">Продажа комплектующих</a></li>
+                        <li><a href="#">Тубирование</a></li>
+                        <li><a href="#">Печать тубного ламината</a></li>
+                        <li><a href="#">Продажа комплектующих</a></li>
+                        <li><a href="#">Тубирование</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Пакеты</h3>
+                    <ul>
+                        <li><a href="#">Фасовочные пакеты</a></li>
+                        <li><a href="#">Флексопечать по ПНД, ПВД, БОПП</a></li>
+                        <li><a href="#">Упаковка для продуктов</a></li>
+                        <li><a href="#">Фасовочные пакеты</a></li>
+                        <li><a href="#">Флексопечать по ПНД, ПВД, БОПП</a></li>
+                        <li><a href="#">Упаковка для продуктов</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3> Офсетные этикетки</h3>
+                    <ul>
+                        <li><a href="#">Печать этикеток защиты</a></li>
+                        <li><a href="#">Печать наклеек</a></li>
+                        <li><a href="#">Визитки</a></li>
+                        <li><a href="#">Печать этикеток защиты</a></li>
+                        <li><a href="#">Печать наклеек</a></li>
+                        <li><a href="#">Визитки</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Бумажная тара</h3>
+                    <ul>
+                        <li><a href="#">Картонные втулки (гильзы, шпули)</a></li>
+                        <li><a href="#">Бумажные стаканчики </a></li>
+                        <li><a href="#">Одноразовая посуда</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Самоклеющаяся этикетка</h3>
+                    <ul>
+                        <li><a href="#">Все виды этикеток</a></li>
+                        <li><a href="#">Наклейки, стикеры</a></li>
+                        <li><a href="#">Узкорулонная печать</a></li>    
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Ролевая печать</h3>
+                    <ul>
+                        <li><a href="#">Печать листовок</a></li>
+                        <li><a href="#">Работа на давальческом сырье</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="btn">Посмотреть все категории</a>
         </div>
     </div>
 
