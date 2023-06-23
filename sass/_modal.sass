@@ -1,5 +1,5 @@
 .modal
-    // display: none
+    display: none
     position: fixed
     top: 0
     left: 0
@@ -92,7 +92,7 @@
                     left: 4px
                     background-color: $prime
 
-            a 
+            a
                 padding: 6px 0
                 display: block
 
@@ -102,7 +102,14 @@
         .btn
             display: none
 
-    @media screen and ( max-width: 1170px )
+        .show-more
+            font-size: 18px
+            font-family: Roboto
+            font-weight: 500
+            color: $prime
+            padding: 6px 20px
+
+    @media screen and ( max-width: 1200px )
         &-content
             padding: 50px 30px 55px
 
@@ -113,6 +120,35 @@
             line-height: 25px
             height: 24px
             font-size: 14px
+
+        &-catalogue
+            .wrap
+                gap: 32px 0
+            h3
+                font-size: 16px
+                margin-bottom: 8px
+
+            .modal
+                &-content
+                    max-width: 684px
+                    padding: 46px 60px
+
+            .item
+                width: 48%
+
+            ul
+                li
+                    padding-left: 14px
+                    &::before
+                        left: 0
+                a
+                    font-size: 12px
+                    padding: 4px 0
+                    line-height: 150%
+
+            .show-more
+                font-size: 14px
+                padding: 4px 14px
 
     @media screen and ( max-width: 700px )
         &-content
@@ -134,3 +170,59 @@
             right: 16px
             line-height: 25px
             font-size: 14px
+
+        &-catalogue
+            .wrap
+                display: block
+            h2
+                font-size: 16px
+                text-align: center
+                display: block
+                top: 0
+                left: 0
+                position: absolute
+                width: 100%
+                margin: 0
+                padding: 12px 0
+                color: #fff
+                background-color: $bg
+
+            .modal
+                &-content
+                    height: 100%
+                    max-height: 100%
+                    padding: 0
+                    width: 100%
+                    max-width: 100%
+                    padding-top: 43px
+                    border-radius: 0
+
+                &-close
+                    left: 0
+                    top: 0
+                    font-size: 22px
+                    height: 44px
+                    width: 50px
+                    background-color: $bg
+                    border-radius: 0
+                    color: #fff
+                    z-index: 111
+            .item
+                width: 100%
+                border-bottom: 1px solid rgba(9, 43, 14, 0.30)
+
+            h3
+                font-size: 16px
+                line-height: 130%
+                padding: 14px 16px 
+                margin: 0
+                background-image: url('../img/arrow-right.svg')
+                background-repeat: no-repeat
+                background-position: center right 20px
+                filter: grayscale(10)
+                &:hover, &:active
+                    filter: grayscale(0)
+
+            ul
+                display: none
+                padding: 0 16px 14px

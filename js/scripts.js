@@ -3,8 +3,93 @@ $(document).ready(function () {
 
     $('.btn-menu').on('click', function () {
         $(this).toggleClass('active');
-        $('header, body').toggleClass('active');
+        $('header .navbar').slideToggle();
     })
+
+    /*---------------------------------------------------end*/
+
+    function hideModals() {
+        $('.modal').fadeOut();
+        $('.modal, body, [data-modal]').removeClass('active');
+    };
+    $(function () {
+        function showModal(id) {
+            if ($(id).hasClass('active')) {
+                $(id).fadeOut(300)
+                $(id).removeClass('active');
+                $('body').removeClass('active');
+            } else {
+                $(id).addClass('active')
+                $('body').addClass('active');
+                $(id).fadeIn(300);
+            }
+        }
+
+        $('[data-modal]').on('click', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active')
+            showModal('#' + $(this).attr("data-modal"));
+        });
+
+        $('.modal-close').on('click', () => {
+            hideModals();
+        });
+
+        $(document).on('click', function (e) {
+            if (!(
+                ($(e.target).parents('.modal-content').length) ||
+                ($(e.target).parents('.nav').length) ||
+                ($(e.target).hasClass('btn')) ||
+                ($(e.target).hasClass('show-more')) ||
+                ($(e.target).hasClass('modal-content'))
+            )) {
+                hideModals();
+            }
+        });
+    });
+
+    /*---------------------------------------------------end*/
+
+    var threshold = 3; // пороговое значение, после которого добавляется кнопка
+
+    function handleResponsive() {
+        if ($(window).width() > 700) {
+            $('#modal-catalogue ul').each(function () {
+                var $ul = $(this);
+                var $li = $ul.find('li');
+
+                if ($li.length > threshold) {
+                    $li.slice(threshold).hide();
+                    if (!$ul.next('.show-more').length) {
+                        $ul.after('<button class="show-more">Показать</button>');
+                    }
+                }
+            });
+        } else {
+            $('.show-more').remove();
+            $('#modal-catalogue ul li').show();
+        }
+    }
+
+    // Первичный обработчик
+    handleResponsive();
+
+    // Обработчик изменения размера окна
+    $(window).resize(function () {
+        handleResponsive();
+    });
+
+    $(document).on('click', '#modal-catalogue h3', function () {
+        if ($(window).width() < 700) {
+            $(this).next('ul').slideToggle();
+        }
+
+    });
+    $(document).on('click', '.show-more', function () {
+        $(this).prev('ul').find('li').show();
+        $(this).remove();
+    });
+
 
     /*---------------------------------------------------end*/
 
@@ -139,7 +224,7 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
+    // $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
 
     /*---------------------------------------------------end*/
 
