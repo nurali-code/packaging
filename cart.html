@@ -47,7 +47,7 @@
                 <a href="./services.html">Услуги</a>
                 <a href="./delivery.html">Доставка и оплата</a>
                 <a href="./news.html">Новости</a>
-                <a href="./shipments.html" class="active">Отгрузки</a>
+                <a href="./shipments.html">Отгрузки</a>
             </nav>
         </div>
         <div class="header-bottom">
@@ -63,28 +63,78 @@
 
     <nav class="path container">
         <a href="./index.html">Главная</a>
-        <a href="./shipments.html">Отгрузки</a>
-        <a href="./article.html">Отгрузка партии наклеек 10 мая 2023</a>
+        <a href="./cart.html">Корзина</a>
     </nav>
 
-    <section>
+    <section class="cart">
         <div class="container">
-            <article>
-                <h1>Отгрузка партии наклеек</h1>
-                <img src="img/news-3.jpg" alt="img">
-                <p>
-                    Внезапно, акционеры крупнейших компаний будут своевременно верифицированы. Лишь некоторые
-                    особенности внутренней политики объединены в целые кластеры себе подобных. Каждый из нас понимает
-                    очевидную вещь: повышение уровня гражданского сознания однозначно фиксирует необходимость
-                    экспериментов, поражающих по своей масштабности и грандиозности. Однозначно, активно развивающиеся
-                    страны третьего мира объявлены нарушающими общечеловеческие нормы этики и морали.
-                </p>
-            </article>
+            <div class="wrap cart-title">
+                <h2>Корзина</h2>
+                <button>Очистить корзину</button>
+            </div>
+            <p class="cart-header wrap">
+                <span>Наименование</span>
+                <span>Цена</span>
+                <span>Количество </span>
+                <span>Стоимость</span>
+            </p>
+            <div class="cart-item">
+                <p class="cart-item__heading">Рулон самоклеющихся наклеек К</p>
+                <p class="cart-item__price">1.500 ₽</p>
+                <div class="amount">
+                    <button class="amount__remove">-</button>
+                    <input type="text" value="10">
+                    <button class="amount__add">+</button>
+                </div>
+                <p class="cart-item__total">15.000 ₽</p>
+                <button class="cart-item__delete"></button>
+            </div>
+            <div class="cart-item">
+                <p class="cart-item__heading">Гибкая упаковка 3*10 м</p>
+                <p class="cart-item__price">2.500 ₽</p>
+                <div class="amount">
+                    <button class="amount__remove">-</button>
+                    <input type="text" value="2">
+                    <button class="amount__add">+</button>
+                </div>
+                <p class="cart-item__total">5.000 ₽</p>
+                <button class="cart-item__delete"></button>
+            </div>
+            <div class="cart-item">
+                <p class="cart-item__heading">Рулон самоклеющихся наклеек К</p>
+                <p class="cart-item__price">1.500 ₽</p>
+                <div class="amount">
+                    <button class="amount__remove">-</button>
+                    <input type="text" value="10">
+                    <button class="amount__add">+</button>
+                </div>
+                <p class="cart-item__total">15.000 ₽</p>
+                <button class="cart-item__delete"></button>
+            </div>
+            <div class="cart-item">
+                <p class="cart-item__heading">Гибкая упаковка 3*10 м</p>
+                <p class="cart-item__price">2.500 ₽</p>
+                <div class="amount">
+                    <button class="amount__remove">-</button>
+                    <input type="text" value="2">
+                    <button class="amount__add">+</button>
+                </div>
+                <p class="cart-item__total">5.000 ₽</p>
+                <button class="cart-item__delete"></button>
+            </div>
+            <p class="total">
+                <span class="total__text">Итоговая сумма:</span>
+                <span class="total__price">35.000 ₽</span>
+            </p>
+            <div class="wrap cart-footer">
+                <a href="#" class="btn btn_outline">Вернуться к покупкам</a>
+                <a href="#" class="btn">Оформить заказ</a>
+            </div>
         </div>
     </section>
 
     <section class="bg">
-        <h2>Предложение для вас</h2>
+        <h2>Вам может быть интересно</h2>
         <div class="product-slider shadow">
             <div class="product product_big">
                 <div class="product-img">

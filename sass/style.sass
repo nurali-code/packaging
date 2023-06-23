@@ -388,6 +388,83 @@ article
         font-size: 20px
         line-height: 150%
 
+.cart
+    text-align: left
+    padding: 44px 0
+    h2
+        margin: 0
+    &-title
+        margin-bottom: 40px
+    &-header
+        background-color: $bg
+        border-radius: $b-radius
+        padding: 12px 120px 12px 37px
+        flex-wrap: nowrap
+        color: #fff
+        span
+            display: block
+            // margin: 0 auto
+            text-align: center
+            width: 15%
+            &:first-child
+                text-align: left
+                margin: 0
+                width: 40%
+            &:nth-child(2)
+
+            &:nth-child(3)
+                width: 174px
+
+    &-item
+        padding: 0 37px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 30px
+        p
+            margin: 0
+
+        &__heading
+            width: 38%
+            font-size: 22px
+
+        .amount
+
+        &__price,
+        &__total
+            text-align: center
+            width: 15%
+            font-size: 24px
+            color: $prime
+
+        &__delete
+            width: 40px
+            height: 30px
+            background-image: url('../img/delete.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 30px 30px
+
+    .total
+        padding: 34px 0
+        margin: 0
+        text-align: right
+        font-weight: 500
+        line-height: 150%
+        &__text
+            font-size: 28px
+        &__price
+            font-size: 32px
+            min-width: 240px
+            display: inline-block
+            text-align: center
+            color: $third
+
+    &-footer
+        justify-content: flex-end
+        .btn
+            margin: 0 15px
+
 @import 'footer'
 
 @media screen and ( max-width: 1460px )
@@ -628,6 +705,55 @@ article
 
         p
             font-size: 14px
+
+    .cart
+        padding: 16px 0
+        &-title
+            margin-bottom: 16px
+
+        &-header
+            padding: 10px 33px 10px 10px
+            border-radius: 12px
+            span
+                font-size: 14px
+                text-align: center !important
+                width: 16%
+                &:first-child
+                    width: 36%
+                &:nth-of-type(3)
+                    width: 110px
+
+        &-item
+            padding: 0 8px
+            margin-bottom: 12px
+            &__delete
+                width: 25px
+                height: 25px
+                background-size: 90% auto
+
+            &__heading,
+            &__price,
+            &__total
+                font-size: 14px
+                margin: 0 auto !important
+            &__heading
+                width: 36%
+                margin: 0 !important
+            &__total
+                margin-right: 0 !important
+
+        .total
+            padding: 18px 0
+            border-top: 1px solid rgba(9, 43, 14, 0.30)
+            &__text
+                font-size: 22px
+            &__price
+                min-width: 173px
+                font-size: 20px
+
+        &-footer
+            .btn
+                margin: 0 8px
 
 @media screen and ( max-width: 700px )
     .hero
