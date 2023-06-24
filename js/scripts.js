@@ -98,6 +98,30 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40, }, 300,)
     })
     /*---------------------------------------------------end*/
+
+    if ($('section').hasClass('ordering')) {
+        $(document).ready(function () {
+            $('input[type="radio"]').click(function () {
+                if ($('#delivery3').is(':checked')) {
+                    $('.ordering-delivery').slideDown();
+                    $('#ordering_address').attr('required', true);
+                } else {
+                    $('.ordering-delivery').slideUp();
+                    $('#ordering_address').removeAttr('required');
+                }
+            });
+
+            // Проверить и скрыть блок при загрузке страницы, если нужно
+            if (!$('#delivery3').is(':checked')) {
+                $('.ordering-delivery').hide();
+                $('#ordering_address').removeAttr('required');
+            }
+        });
+
+    }
+
+    /*---------------------------------------------------end*/
+
     $('.hero').slick({
         dots: true,
         arrows: false,
@@ -176,51 +200,55 @@ $(document).ready(function () {
         ]
     });
 
-    $('.certificates-slider').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        centerPadding: '25px',
-        slidesToShow: 3,
-        swipeToSlide: true,
-        centerMode: true,
-        slidesToScroll: 1,
-        variableWidth: false,
-        responsive: [
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: true,
-                    centerPadding: '20px',
-                    variableWidth: false,
-                    dots: true
-                }
-            },
-        ]
-    });
+    if ($('div').hasClass('certificates-slider')) {
+        $('.certificates-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            centerPadding: '25px',
+            slidesToShow: 3,
+            swipeToSlide: true,
+            centerMode: true,
+            slidesToScroll: 1,
+            variableWidth: false,
+            responsive: [
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 2,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        variableWidth: false,
+                        dots: true
+                    }
+                },
+            ]
+        });
+    }
 
-    $('.clients-slider').slick({
-        dots: true,
-        arrows: false,
-        rows: 2,
-        infinite: true,
-        speed: 300,
-        centerPadding: '',
-        slidesToShow: 3,
-        swipeToSlide: true,
-        slidesToScroll: 1,
-        variableWidth: false,
-        responsive: [
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ]
-    });
+    if ($('div').hasClass('clients-slider')) {
+        $('.clients-slider').slick({
+            dots: true,
+            arrows: false,
+            rows: 2,
+            infinite: true,
+            speed: 300,
+            centerPadding: '',
+            slidesToShow: 3,
+            swipeToSlide: true,
+            slidesToScroll: 1,
+            variableWidth: false,
+            responsive: [
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
+    };
 
     /*---------------------------------------------------end*/
 
@@ -228,10 +256,10 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    $('.dropdown-btn').click(function () {
-        $(this).next('.dropdown-content').slideDown();
-        $(this).remove();
-    });
+    // $('.dropdown-btn').click(function () {
+    //     $(this).next('.dropdown-content').slideDown();
+    //     $(this).remove();
+    // });
 
 });
 

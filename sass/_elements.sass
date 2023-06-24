@@ -91,6 +91,9 @@ section
     &.bg
         background-color: #E2EDFF
 
+    .path
+        padding: 0 0 44px
+
 .btn
     font-weight: 500
     font-size: 20px
@@ -108,7 +111,7 @@ section
     img
         display: inline-block
         vertical-align: middle
-        margin: 0 0 1px
+        margin: 0 4px 1px
 
     &:hover
         opacity: 1
@@ -191,6 +194,10 @@ section
 .wrap, .connect
     justify-content: space-between
     align-items: center
+    &-title
+        margin-bottom: 40px
+        h1, h2, h3
+            margin-bottom: 0 !important
 
 .connect
     font-weight: 500
@@ -215,17 +222,18 @@ textarea,
 select
     display: block
     width: 100%
-    height: 50px
+    max-width: 660px
+    height: 72px
     background: #fff
     font-weight: 400
     font-size: 20px
     line-height: 150%
-    padding: 0 20px
+    padding: 0 30px
     text-align: left
     color: $black
     appearance: none
-    border-radius: $b-radius
-    border: 1px solid rgba($black, .8)
+    border-radius: 12px
+    border: 1px solid rgba($black, .3)
     margin-bottom: 16px
     &::placeholder
         color: rgba(31, 37, 40, 0.7)
@@ -248,11 +256,52 @@ select
         box-shadow: none
 
 textarea
-    min-height: 200px
     line-height: 130%
+    max-width: 70%
     resize: none
-    padding: 8px 10px 0
+    padding: 20px 30px 0
     height: unset
+
+fieldset
+    border: none
+    padding: 0
+    text-align: left
+    margin: 0 0 30px
+    label
+        display: block
+        font-size: 22px
+        margin-bottom: 30px
+        font-weight: 500
+.inp-radio
+    label
+        display: inline-block
+        position: relative
+        font-weight: 400
+        padding: 10px 0 10px 56px
+        cursor: pointer
+        margin: 0
+        &::before,
+        &::after
+            width: 28px
+            height: 28px
+            content: ''
+            display: block
+            border-radius: 36px
+            border: 1px solid #1F2528
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        &::after
+            transform: translateY(-50%) scale(0)
+            background-color: $prime
+            border-color: $prime
+            transition: transform .3s ease
+
+    input
+        display: none
+        &:checked ~ label::after
+            transform: translateY(-50%) scale(.5)
 
 [data-cart]
     position: relative
@@ -459,11 +508,46 @@ textarea
             height: 20px
             font-size: 14px
 
-        button 
+        button
             height: 20px
             line-height: 20px
             font-size: 14px
             width: 35px
+
+    .wrap
+        &-title
+            margin-bottom: 16px
+
+    .inp-radio
+        margin-bottom: 12px
+        label
+            font-size: 16px
+            padding: 5px 0 5px 36px
+            &::before,
+            &::after
+                width: 24px
+                height: 24px
+
+    fieldset
+        margin-bottom: 20px
+        label
+            font-size: 20px
+            margin-bottom: 12px
+
+        input,
+        textarea
+            font-size: 14px
+            height: 44px
+            margin-bottom: 0
+            padding: 12px
+            max-width: 80%
+
+        textarea
+            height: 72px
+
+    section
+        .path
+            padding: 0 0 16px
 
 @media screen and ( max-width: 700px )
     h2
@@ -481,3 +565,25 @@ textarea
             &::before,
             &::after
                 display: none
+
+    .amount
+        input,
+        button
+            height: 24px
+
+    fieldset
+        margin-bottom: 12px
+        label
+            font-size: 14px
+            margin-bottom: 8px
+        input,
+        textarea
+            width: 100%
+            max-width: 100%
+            font-size: 12px
+            padding: 8px 
+
+    .inp-radio
+        label
+            font-size: 14px
+            padding-left: 32px

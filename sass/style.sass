@@ -390,11 +390,12 @@ article
 
 .cart
     text-align: left
-    padding: 44px 0
-    h2
-        margin: 0
-    &-title
-        margin-bottom: 40px
+
+    &__clear
+        padding: 14px
+        font-size: 20px
+        color: #1F2528
+
     &-header
         background-color: $bg
         border-radius: $b-radius
@@ -421,17 +422,19 @@ article
         justify-content: space-between
         align-items: center
         margin: 0 0 30px
-        p
-            margin: 0
+        &__img
+            display: none
 
         &__heading
             width: 38%
             font-size: 22px
+            margin: 0
 
         .amount
 
         &__price,
         &__total
+            margin: 0
             text-align: center
             width: 15%
             font-size: 24px
@@ -464,6 +467,28 @@ article
         justify-content: flex-end
         .btn
             margin: 0 15px
+
+.ordering
+    text-align: left
+    padding: 40px 0
+    h2, h1, h3
+        text-align: left
+    i
+        color: red
+
+    &__required
+        max-width: 640px
+        font-size: 18px
+
+        b
+            font-size: 20px
+
+        a
+            color: $prime
+            text-decoration: underline
+
+    &-delivery
+        display: none
 
 @import 'footer'
 
@@ -707,9 +732,12 @@ article
             font-size: 14px
 
     .cart
-        padding: 16px 0
-        &-title
-            margin-bottom: 16px
+        padding-bottom: 40px
+        .path
+            padding: 16px 0
+
+        &__clear
+            font-size: 12px
 
         &-header
             padding: 10px 33px 10px 10px
@@ -735,10 +763,11 @@ article
             &__price,
             &__total
                 font-size: 14px
-                margin: 0 auto !important
+                line-height: 140%
+                margin: 0 auto
             &__heading
                 width: 36%
-                margin: 0 !important
+                margin: 0
             &__total
                 margin-right: 0 !important
 
@@ -754,6 +783,18 @@ article
         &-footer
             .btn
                 margin: 0 8px
+
+    .ordering
+        padding: 20px 0 40px
+
+        h2, h3
+            margin-bottom: 16px
+        .wrap
+            &-title
+                .btn
+                    padding: 8px
+                    &::before
+                        display: none
 
 @media screen and ( max-width: 700px )
     .hero
@@ -835,3 +876,97 @@ article
 
         p
             margin-bottom: 10px
+
+    .cart
+        position: relative
+        padding-top: 54px
+        .container
+            position: static
+        .path
+            display: none
+
+        &-header
+            display: none
+
+        &__clear
+            display: none
+
+        &-item
+            display: block
+            position: relative
+            z-index: 1
+            padding-left: 114px
+            padding-right: 30px
+            min-height: 94px
+            margin-bottom: 8px
+            &__img
+                position: absolute
+                top: 0
+                left: 0
+                object-fit: contain
+                display: block
+                width: 94px
+                height: 94px
+
+            &__heading,
+            &__price
+                text-align: left
+                width: 100%
+                max-width: 100%
+                margin-bottom: 4px
+
+            &__total
+                display: none
+
+            &__delete
+                position: absolute
+                bottom: 0
+                right: 0
+
+        .total
+            text-align: left
+            &__text
+                font-size: 16px
+
+            &__price
+                float: right
+                font-size: 18px
+                min-width: unset
+
+        &-footer
+            .btn
+                width: 100%
+                &_outline
+                    font-size: 12px
+                    width: unset
+                    position: absolute
+                    top: 8px
+                    left: 0
+                    padding: 8px 16px
+                    margin: 0
+                    &::before
+                        display: none
+
+    .ordering
+        .path
+            display: none
+        .wrap
+            &-title
+                flex-direction: column-reverse
+                align-items: flex-start
+                text-align: left
+                .btn
+                    padding: 0
+                    margin-bottom: 20px
+                    font-size: 12px
+
+        &__required
+            padding: 4px 0
+            font-size: 12px
+            margin-bottom: 20px
+            b 
+                font-size: 16px
+
+        form 
+            .btn 
+                width: 100%
