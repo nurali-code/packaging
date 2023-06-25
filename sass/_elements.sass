@@ -59,7 +59,7 @@ ul, ol
     margin-bottom: 24px
     li
         margin: 0
-        padding: 5px 0
+        padding: 4px 0
 
 .container
     width: 100%
@@ -83,6 +83,11 @@ button
     &:active
         opacity: 1
         transform: scale(.98)
+
+iframe
+    width: 100% !important
+    height: 470px !important
+    background-color: #eee
 
 section
     padding: 60px 0
@@ -501,6 +506,9 @@ fieldset
     h2
         font-size: 24px
 
+    p, li
+        font-size: 14px
+
     .amount
         width: 110px
         input
@@ -549,6 +557,9 @@ fieldset
         .path
             padding: 0 0 16px
 
+    iframe
+        height: 320px !important
+
 @media screen and ( max-width: 700px )
     h2
         font-size: 20px
@@ -581,9 +592,12 @@ fieldset
             width: 100%
             max-width: 100%
             font-size: 12px
-            padding: 8px 
+            padding: 8px
 
     .inp-radio
         label
             font-size: 14px
             padding-left: 32px
+
+    p, li
+        font-size: 12px

@@ -385,8 +385,9 @@ article
 
     p
         text-align: left
-        font-size: 20px
-        line-height: 150%
+
+    ol, li
+        text-align: left
 
 .cart
     text-align: left
@@ -489,6 +490,31 @@ article
 
     &-delivery
         display: none
+
+.map
+    padding-bottom: 0
+    h2
+        margin-bottom: 30px
+
+    p
+        margin-bottom: 40px
+
+.lost
+    position: relative
+    z-index: 1
+    background-color: $bg
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 110px
+        background-image: url('../img/bg-arrow.svg')
+        background-repeat: no-repeat
+        background-size: 100% auto 
+        z-index: 1
 
 @import 'footer'
 
@@ -725,11 +751,10 @@ article
             font-size: 14px
 
     article
+        h1, h2
+            margin-bottom: 16px
         img
             margin-bottom: 20px
-
-        p
-            font-size: 14px
 
     .cart
         padding-bottom: 40px
@@ -795,6 +820,13 @@ article
                     padding: 8px
                     &::before
                         display: none
+
+    .map
+        h2
+            margin-bottom: 16px
+        p
+            font-size: 14px
+            margin-bottom: 20px
 
 @media screen and ( max-width: 700px )
     .hero
@@ -871,6 +903,9 @@ article
             font-size: 10px
 
     article
+        h1, h2
+            margin-bottom: 12px
+
         img
             margin-bottom: 12px
 
@@ -964,9 +999,16 @@ article
             padding: 4px 0
             font-size: 12px
             margin-bottom: 20px
-            b 
+            b
                 font-size: 16px
 
-        form 
-            .btn 
+        form
+            .btn
                 width: 100%
+
+    .map
+        h2
+            margin-bottom: 10px
+        p
+            font-size: 12px
+            margin-bottom: 16px
