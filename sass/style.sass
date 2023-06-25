@@ -655,6 +655,95 @@ article
     &-wrap
         gap: 20px
 
+.category
+    position: relative
+    z-index: 111
+    text-align: left
+    &-filter
+        border-radius: 12px
+        border: 2px solid #19AD16
+        background: #FFF
+        padding: 20px 30px
+        width: 340px
+        .dropdown
+            &-btn
+                width: 100%
+                text-align: left
+                display: block
+                color: $prime
+                font-size: 19px
+                font-family: Roboto
+                font-weight: 500
+                line-height: 32px
+                margin: 0 0 20px
+                padding-right: 24px
+                background-image: url('../img/arrow-down.svg')
+                background-repeat: no-repeat
+                background-position: center right
+                background-size: auto 70%
+
+    .inp-radio
+        margin-bottom: 12px
+        &:last-child
+            margin-bottom: 0
+        label
+            padding: 1px 0 1px 30px
+            font-size: 18px
+            margin: 0
+
+            &::before,
+            &::after
+                width: 20px
+                height: 20px
+                border-radius: 8px
+
+    .container
+        align-items: start
+
+    &-content
+        width: calc( 100% - 380px )
+
+    .filter
+        margin-bottom: 24px
+
+    .sort
+        margin-bottom: 40px
+
+    .product
+        width: 32%
+        background-color: #fff
+        &-wrap
+            gap: 25px 2%
+
+        &__heading
+            font-size: 20px
+            margin-bottom: 4px
+
+        &__price
+            font-size: 20px
+            margin-bottom: 10px
+            i
+                font-size: 24px
+
+        &__list
+            font-size: 16px
+
+        .wrap
+            padding: 0 16px
+            .btn
+                font-size: 16px
+                margin-top: 12px
+                &_outline
+                    font-size: 14px
+                    width: unset
+                    min-width: 45%
+                    &::before
+                        display: none
+                &_second
+                    font-size: 14px
+                    width: unset
+                    min-width: 50%
+
 @import 'footer'
 
 @media screen and ( max-width: 1460px )

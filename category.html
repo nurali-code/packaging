@@ -44,7 +44,7 @@
             <nav class="navbar">
                 <a href="./index.html">Главная</a>
                 <a href="./about.html">О нас</a>
-                <a href="./services.html" class="active">Услуги</a>
+                <a href="./services.html">Услуги</a>
                 <a href="./delivery.html">Доставка и оплата</a>
                 <a href="./news.html">Новости</a>
                 <a href="./shipments.html">Отгрузки</a>
@@ -64,62 +64,280 @@
     <nav class="path container">
         <a href="./index.html">Главная</a>
         <a href="./catalogue.html">Каталог</a>
+        <a href="./category.html">Гофротара</a>
     </nav>
 
-    <main>
-        <div class="container">
-            <h1>Услуги</h1>
-            <div class="service-wrap">
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+    <main class="category">
+        <div class="container wrap">
+            <div class="category-filter">
+                <div class="dropdown">
+                    <button class="dropdown-btn">Размер упаковки</button>
+                    <fieldset class="dropdown-content">
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension1" value="Габарит S">
+                            <label for="dimension1">Габарит S</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension2" value="Габарит M">
+                            <label for="dimension2">Габарит M</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension3" value="Габарит L">
+                            <label for="dimension3">Габарит L</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension4" value="Габарит XL">
+                            <label for="dimension4">Габарит XL</label>
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Очень важный параметр</button>
+                    <fieldset class="dropdown-content">
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension11" value="Габарит S">
+                            <label for="dimension11">Габарит S</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension22" value="Габарит M">
+                            <label for="dimension22">Габарит M</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension33" value="Габарит L">
+                            <label for="dimension33">Габарит L</label>
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Размер упаковки</button>
+                    <fieldset class="dropdown-content">
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension10" value="Габарит S">
+                            <label for="dimension10">Габарит S</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension20" value="Габарит M">
+                            <label for="dimension20">Габарит M</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension30" value="Габарит L">
+                            <label for="dimension30">Габарит L</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension40" value="Габарит XL">
+                            <label for="dimension40">Габарит XL</label>
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+            </div>
+            <div class="category-content">
+                <div class="filter">
+                    <button class="filter__btn">Гофроупаковка </button>
+                    <button class="filter__btn">Бумажная упаковка </button>
+                    <button class="filter__btn">Этикетки </button>
+                    <button class="filter__btn">Флексопечать </button>
+                    <button class="filter__btn">Рулонная печать</button>
+                    <button class="filter__btn">Туба</button>
+                    <button class="filter__btn">Пакеты</button>
+                    <button class="filter__btn">БОПП</button>
+                    <button class="filter__btn">ПВД </button>
+                    <button class="filter__btn">Гофроупаковка </button>
+                    <button class="filter__btn">Бумажная упаковка </button>
+                    <button class="filter__btn">Этикетки </button>
+                    <button class="filter__btn">Флексопечать </button>
+                    <button class="filter__btn">Рулонная печать</button>
+                    <button class="filter__btn">Туба</button>
+                    <button class="filter__btn">Пакеты</button>
+                    <button class="filter__btn">БОПП</button>
+                    <button class="filter__btn">ПВД </button>
+                    <button class="toggle" id="filter__toggler">Показать ещё</button>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+                <div class="sort">
+                    <button class="sort-btn">Сортировать: <i>по умолчанию</i></button>
+                    <div class="sort-content">
+                        <button>По умолчанию</button>
+                        <button>Начать с популярных</button>
+                        <button>Начать с новинок</button>
+                        <button>Начать с более дорогих</button>
+                        <button>Начать с более дешевых</button>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
+                <div class="product-wrap">
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <span class="discount">Скидка %</span>
+                            <img loading="lazy" src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Гибкая упаковка</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Печать БОПП</a>
+                            <a href="#" class="product__list">Печать с ламинацией</a>
+                            <a href="#" class="product__list">Продажа и резка пленки БОПП</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <span class="discount">Скидка %</span>
+                            <img loading="lazy" src="img/product-2.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Пакеты</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Фасовочные пакеты</a>
+                            <a href="#" class="product__list">Флексопечать по ПВД</a>
+                            <a href="#" class="product__list">Флексопечать по ПНД</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <img loading="lazy" src="img/product-3.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Самоклеющаяся этикетка</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Все виды этикеток</a>
+                            <a href="#" class="product__list">Наклейки, стикеры</a>
+                            <a href="#" class="product__list">Узкорулонная печать</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <img loading="lazy" src="img/product-4.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Бумажные и крафт-пакеты</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Пакеты для строительных смесей</a>
+                            <a href="#" class="product__list">Пакеты для угля</a>
+                            <a href="#" class="product__list">Пакеты для наполнителя</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <span class="new">Новинка</span>
+                            <img loading="lazy" src="img/product-5.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Гофротара</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Четырехклапанные короба</a>
+                            <a href="#" class="product__list">Короба со сложной высечкой</a>
+                            <a href="#" class="product__list">Печать по гофрокартону</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <span class="new">Новинка</span>
+                            <img loading="lazy" src="img/product-6.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Бумажная тара</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Картонные втулки (гильзы, шпули)</a>
+                            <a href="#" class="product__list">Бумажные стаканчики</a>
+                            <a href="#" class="product__list">Одноразовая посуда</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <span class="new">Новинка</span>
+                            <img loading="lazy" src="img/product-7.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Ролевая печать</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Печать листовок</a>
+                            <a href="#" class="product__list">Работа на давальческом сырье</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <img loading="lazy" src="img/product-8.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Ламинатная туба</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Офсетные этикетки</a>
+                            <a href="#" class="product__list">Печать тубного ламината</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <span class="in_stock">В наличии</span>
+                            <img loading="lazy" src="img/product-9.jpg" alt="product">
+                        </div>
+                        <div class="product-title">
+                            <p class="product__heading">Печать этикеток защиты</p>
+                            <p class="product__price">Цена <i>1500 ₽</i></p>
+                            <a href="#" class="product__list">Продажа комплектующих</a>
+                            <a href="#" class="product__list">Печать наклеек</a>
+                        </div>
+                        <div class="wrap">
+                            <button class="sm btn">В корзину</button>
+                            <a href="#" class="sm btn btn_outline">Подробнее</a>
+                            <button class="sm btn btn_second">Купить в 1 клик</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
-                </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
-                </div>
-                <div class="service">
-                    <h3 class="service__heading">Ролевая офсетная печать на упаковке</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
-                </div>
-                <div class="service">
-                    <h3 class="service__heading">Ламинатная туба</h3>
-                    <img src="img/product-1.jpg" alt="product">
-                    <a href="./card-service.html">Посмотреть подробнее</a>
-                </div>
+                <nav class="pagination wrap">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#"><img src="img/arrow-right.svg" alt="arrow-right"></a>
+                </nav>
             </div>
         </div>
     </main>

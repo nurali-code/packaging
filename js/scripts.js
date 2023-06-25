@@ -69,7 +69,7 @@ $(document).ready(function () {
         }
     }
     handleResponsive();
-    
+
     $(window).resize(function () {
         handleResponsive();
     });
@@ -273,10 +273,10 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    // $('.dropdown-btn').click(function () {
-    //     $(this).next('.dropdown-content').slideDown();
-    //     $(this).remove();
-    // });
+    $('.dropdown-btn').click(function () {
+        $(this).next('.dropdown-content').slideToggle();
+        $(this).toggleClass('active');
+    });
 
 });
 
