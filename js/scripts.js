@@ -50,16 +50,14 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    var threshold = 3; // пороговое значение, после которого добавляется кнопка
-
     function handleResponsive() {
         if ($(window).width() > 700) {
             $('#modal-catalogue ul').each(function () {
                 var $ul = $(this);
                 var $li = $ul.find('li');
 
-                if ($li.length > threshold) {
-                    $li.slice(threshold).hide();
+                if ($li.length > 3) {
+                    $li.slice(3).hide();
                     if (!$ul.next('.show-more').length) {
                         $ul.after('<button class="show-more">Показать</button>');
                     }
@@ -70,11 +68,8 @@ $(document).ready(function () {
             $('#modal-catalogue ul li').show();
         }
     }
-
-    // Первичный обработчик
     handleResponsive();
-
-    // Обработчик изменения размера окна
+    
     $(window).resize(function () {
         handleResponsive();
     });
@@ -85,6 +80,7 @@ $(document).ready(function () {
         }
 
     });
+
     $(document).on('click', '.show-more', function () {
         $(this).prev('ul').find('li').show();
         $(this).remove();
@@ -93,10 +89,31 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40, }, 300,)
-    })
+    if ($('div').hasClass('filter')) {
+        var toggler = $("#filter__toggler");
+        var buttons = $(".filter__btn");
+
+        function togglerHide() {
+            toggler.text('Показать ещё')
+            toggler.addClass('toggle');
+            buttons.slice(0, buttons.length / 2).hide();
+        } togglerHide()
+
+        buttons.click(function () {
+            $(this).toggleClass('active')
+        })
+        toggler.click(function () {
+            if (toggler.hasClass('toggle')) {
+                buttons.show();
+                toggler.removeClass('toggle');
+                toggler.text('Скрыть')
+            }
+            else {
+                togglerHide();
+            }
+        });
+    }
+
     /*---------------------------------------------------end*/
 
     if ($('section').hasClass('ordering')) {
