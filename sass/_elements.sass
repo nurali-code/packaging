@@ -437,13 +437,15 @@ fieldset
         padding-right: 24px
         background-image: url('../img/arrow-down.svg')
         background-repeat: no-repeat
-        background-position: center right 
+        background-position: center right
         background-size: auto 70%
         i
             font-style: normal
             font-size: 20px
             opacity: .7
 
+        &.active
+            color: $prime
 
     &-content
         display: none
@@ -618,6 +620,19 @@ fieldset
 
     iframe
         height: 320px !important
+
+    .sort
+        &-btn
+            font-size: 12px
+            padding-right: 14px
+            i
+                font-size: 12px
+
+        &-content
+            width: 200px
+            padding: 10px 14px
+            button
+                font-size: 12px
 
 @media screen and ( max-width: 700px )
     h2
