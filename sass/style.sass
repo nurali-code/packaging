@@ -7,6 +7,8 @@
 .hero
     overflow: hidden
     width: 100%
+    text-align: left
+    padding: 0
     &-item
         padding: 120px 0
         position: relative
@@ -623,6 +625,36 @@ article
         z-index: 1
         padding: 10px 20px
 
+.service
+    display: flex
+    flex-direction: column
+    width: 310px
+    padding: 30px 24px 0
+    border-radius: 12px
+    border: 1px solid rgba(9, 43, 14, 0.30)
+    background: #FFF
+    text-align: left
+    img
+        height: 194px
+        width: 100%
+        display: block
+        object-fit: cover
+        margin-top: auto
+        border-radius: 12px
+
+    &__heading
+        font-size: 24px
+        line-height: 150%
+        margin: 0 0 24px
+
+    a
+        display: block
+        color: $prime
+        font-size: 20px
+        padding: 24px 0 30px
+    &-wrap
+        gap: 20px
+
 @import 'footer'
 
 @media screen and ( max-width: 1460px )
@@ -667,6 +699,9 @@ article
     .box
         &-wrap
             gap: 32px 32px
+
+    .service
+        width: 290px
 
 @media screen and ( max-width: 1200px )
     .hero
@@ -989,6 +1024,13 @@ article
             bottom: 12px
             width: calc( 100% - 8px )
 
+    .service
+        width: 330px
+        &-wrap
+            gap: 20px 24px
+            max-width: 685px
+            margin: 0 auto
+
 @media screen and ( max-width: 700px )
     .hero
         .container
@@ -1209,3 +1251,25 @@ article
 
         img
             width: 20px
+
+    .service
+        width: 100%
+        max-width: 400px
+        margin: 0 auto 12px
+        padding: 16px 0 0
+        display: block
+        &-wrap
+            display: block
+
+        &__heading
+            font-size: 18px
+            padding: 0 12px
+            margin-bottom: 8px
+
+        img
+            height: 150px
+            border-radius: 0
+
+        a
+            padding: 12px 12px 20px
+            font-size: 18px
