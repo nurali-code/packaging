@@ -109,6 +109,66 @@
             color: $prime
             padding: 6px 20px
 
+    &#modal-click
+        display: block
+        h2
+            font-size: 36px
+            margin-bottom: 12px
+        p
+            font-size: 20px
+            margin-bottom: 30px
+            text-align: center
+
+        i 
+            color: red
+
+        .required
+            text-align: left
+            
+            a 
+                color: $prime
+
+        .modal
+            &-content
+                max-width: 600px
+        .inp-wrap
+            margin-bottom: 30px
+            label
+                font-size: 16px
+                font-weight: 500
+                color: rgba($black, .7)
+
+            span
+                font-weight: 500
+                color: $black
+
+            .price, .total
+                font-size: 32px
+                color: $third
+
+            .amount
+                display: inline-flex
+                float: right
+
+
+        .btn
+            width: 100%
+
+        fieldset
+            margin-bottom: 20px
+            input
+                height: 50px
+                padding: 0 20px
+            input,
+            textarea
+                width: 100%
+                max-width: 100%
+                border: 1px solid #19AD16
+                margin: 0
+            label
+                font-size: 16px
+                margin-bottom: 12px
+
     @media screen and ( max-width: 1200px )
         &-content
             padding: 50px 30px 55px
@@ -214,7 +274,7 @@
             h3
                 font-size: 16px
                 line-height: 130%
-                padding: 14px 16px 
+                padding: 14px 16px
                 margin: 0
                 background-image: url('../img/arrow-right.svg')
                 background-repeat: no-repeat

@@ -1,7 +1,7 @@
 @import 'normolize'
 @import 'elements'
-@import 'header'
 @import 'slick'
+@import 'header'
 @import 'modal'
 
 .hero
@@ -768,6 +768,215 @@ article
                     width: unset
                     min-width: 50%
 
+.card
+    text-align: left
+    .container
+        z-index: unset
+        align-items: flex-start
+
+    #reviewTogler
+        display: none
+
+    .new
+        background-color: $bg
+        color: #fff
+    .discount
+        color: #fff
+        background-color: $red
+    .new,
+    .discount,
+    .in_stock
+        padding: 6px 16px
+        border-radius: $b-radius
+
+    .in_stock
+        background-color: #E2EDFF
+        background-image: url('../img/check.svg')
+        background-repeat: no-repeat
+        background-position: center left 8px
+        background-size: 18px auto
+        padding-left: 32px
+        position: absolute
+        left: 24px
+        bottom: 24px
+        z-index: 111
+
+    &-img
+        width: 57%
+        position: relative
+        align-items: flex-start
+
+    &-slider
+        border-radius: 12px
+        width: calc( 100% - 186px )
+        border: 1px solid #E2EDFF
+        overflow: hidden
+        &__item
+            height: 556px
+            display: none
+            &:first-child
+                display: block
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+    &-nav
+        width: 164px
+        position: relative
+        margin: 56px 0
+        &__item
+            width: 164px
+            height: 140px !important
+            border-radius: 8px
+            border: 1px solid #E2EDFF
+            margin: 6px 0
+            overflow: hidden
+            display: none
+            cursor: pointer
+            &:first-child
+                display: block
+                
+            img
+                opacity: .5
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        .slick
+            &-arrow
+                left: 37%
+                border-color: #E2EDFF
+                margin: 0
+                top: -70px
+                transform: rotate(-90deg) translateX(-50%) !important
+
+            &-next
+                bottom: -70px
+                top: auto
+                right: auto
+                transform: rotate(90deg) translateX(-50%) !important
+
+            &-current
+                img
+                    opacity: 1
+
+    &-content
+        width: 41%
+
+    &-info
+        padding: 60px 0
+        width: 100%
+
+    h1
+        margin-bottom: 12px
+
+    &__ar
+        font-size: 20px
+        display: inline-block
+        vertical-align: middle
+        margin-left: 18px
+        opacity: .7
+
+    .row
+        margin-bottom: 20px
+
+    &__subheading
+        font-size: 20px
+        margin-bottom: 12px
+
+    ul
+        padding: 0
+        list-style: none
+        margin: 0 0 12px
+        li
+            font-size: 18px
+            margin-bottom: 8px
+            background-image: url('../img/dots.svg')
+            background-repeat: repeat-x
+            background-position: center center
+            &:last-child
+                margin-bottom: 0
+
+        i
+            color: $third
+
+        i, span
+            max-width: 48%
+            font-style: normal
+            float: right
+            display: inline-block
+            vertical-align: middle
+            padding: 0 0 0 4px
+            background-color: #fff
+        b
+            max-width: 48%
+            font-weight: normal
+            display: inline-block
+            vertical-align: middle
+            padding: 0 4px 0 0
+            background-color: #fff
+
+    &__price
+        font-size: 48px
+        display: inline-block
+        vertical-align: middle
+        color: $third
+        font-weight: bold
+        margin: 42px 0
+        s
+            font-size: 24px
+            color: $black
+            font-weight: normal
+            opacity: .7
+
+    .amount
+        vertical-align: middle
+        display: inline-flex
+        margin: 0 0 0 auto
+        @media screen and ( min-width: 700px )
+            button
+                border: none
+
+    .btn
+        width: 48%
+
+    .tab
+        &-video
+            width: 1016px
+            margin: 0 16px
+            iframe, video
+                width: 100% !important
+                height: unset !important
+                aspect-ratio: 16/9
+        &-videos,
+        &-slider
+            margin: 0
+            .slick
+                &-arrow
+                    top: 50%
+        &-slider
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            .slick
+                &-arrow
+                    top: 50%
+
+                &-prev
+                    left: -60px
+                &-next
+                    right: -60px
+
+        &-slide
+            width: 366px
+            height: 362px
+            padding: 13px
+            margin: 0 13px
+            border-radius: 12px
+            border: 1px solid #E2EDFF
+
 @import 'footer'
 
 @media screen and ( max-width: 1460px )
@@ -815,6 +1024,23 @@ article
 
     .service
         width: 290px
+
+    .card
+        .tab
+
+            &-slider
+                max-width: 1050px
+                margin: 0 auto
+                .slick
+
+                    &-prev
+                        left: -40px
+                    &-next
+                        right: -40px
+
+            &-slide
+                width: 320px
+                height: 322px
 
 @media screen and ( max-width: 1200px )
     .hero
@@ -1208,6 +1434,81 @@ article
                     &_outline
                         order: 3
 
+    .card
+        &-img
+            width: 48%
+
+        &-info
+            padding: 30px 0 10px
+
+        &-content
+            width: 48%
+
+        &-slider
+            order: 1
+            width: 100%
+            &__item
+                height: 322px
+
+        &-nav
+            width: calc( 100% - 90px )
+            margin: 0 auto
+            padding: 18px 0 0
+            order: 2
+            &__item
+                margin: 0 6px
+                height: 76px !important
+            .slick
+                &-arrow
+                    right: -45px
+                    left: auto
+                    top: 50%
+                    margin-top: -15px
+                    width: 30px
+                    height: 30px
+                    transform: none !important
+                &-prev
+                    right: auto
+                    left: -45px
+                    transform: scale(-1) !important
+
+        &__price
+            font-size: 24px
+            margin: 14px 0
+            s
+                font-size: 14px
+
+        &__ar
+            font-size: 14px
+            margin-left: 10px
+
+        ul
+            li
+                font-size: 14px
+                padding: 0
+
+        .tab
+            &-video
+                width: 598px !important
+
+            &-slider
+                max-width: 620px
+                .slick
+                    &-arrow
+                        width: 30px
+                        height: 30px
+                        margin-top: -15px
+                    &-prev
+                        left: -30px
+                    &-next
+                        right: -30px
+
+            &-slide
+                width: 180px
+                height: 182px
+                border: none
+                padding: 0
+
 @media screen and ( max-width: 700px )
     .hero
         .container
@@ -1281,6 +1582,8 @@ article
         padding-top: 12px
         a
             font-size: 10px
+            &::before
+                padding: 0 4px 0 0
 
     article
         h1, h2
@@ -1528,7 +1831,7 @@ article
                 font-size: 18px
                 padding: 6px
 
-        &-content 
+        &-content
             width: 100%
 
         .product
@@ -1540,6 +1843,75 @@ article
                 margin-bottom: 0
                 line-height: 150%
 
-            .wrap 
+            .wrap
                 padding-top: 6px
-        
+
+    .card
+        .container
+            display: block
+        &-img,
+        &-content,
+        &-info
+            width: 100%
+            max-width: 100%
+
+        #reviewTogler
+            display: block
+            width: 100%
+
+        &-slider
+            border: none
+            border-radius: 0
+            &__item
+                height: unset
+
+            .slick-dots
+                li
+                    padding: 16px 0
+
+            img
+                object-fit: contain
+
+        .tab
+            &-video
+                width: 264px !important
+                margin: 0 6px
+            &-slider
+                max-width: 620px
+                .slick
+                    &-arrow
+                        width: 28px
+                        height: 40px
+                        margin-top: -14px
+
+                    &-prev
+                        left: 0px
+
+                    &-next
+                        right: 0px
+
+        &-content
+            .btn
+                width: 100%
+                margin-bottom: 12px
+
+            &-list
+                display: none
+
+            .row
+                margin: 0
+
+        &-nav
+            display: none
+
+        h1
+            font-size: 16px
+
+        &__ar
+            float: right
+
+        &__price
+            margin: 12px 0 16px
+            font-size: 24px
+            s
+                font-size: 14px

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <button class="btn-menu"><span></span></button>
+            <p class="connect">
+                <img src="img/location.svg" alt="img">
+                г. Ногинск, 1-й Кардолентный пр., д.5
+            </p>
+            <p class="connect">
+                <img src="img/time.svg" alt="img">
+                Ежедневно с 9:00 до 18:00
+            </p>
+            <p class="connect phone">
+                <img src="img/call.svg" alt="img">
+                <a href="tel:+79103332600">+7(910)333-26-00</a>
+                <a href="tel:+79103331540">+7(910)333-15-40</a>
+            </p>
+            <div class="social">
+                <a href="#" target="_blank"><img src="img/wa.png" alt="img"></a>
+                <a href="#" target="_blank"><img src="img/vb.png" alt="img"></a>
+                <a href="#" target="_blank"><img src="img/tg.png" alt="img"></a>
+                <a href="#" target="_blank"><img src="img/vk.png" alt="img"></a>
+                <a href="#" target="_blank"><img src="img/yt.png" alt="img"></a>
+            </div>
+        </div>
+        <div class="header-middle">
+            <a href="./index.html" class="logo">Упаковка-дешево.рф</a>
+            <nav class="navbar">
+                <a href="./index.html">Главная</a>
+                <a href="./about.html">О нас</a>
+                <a href="./services.html">Услуги</a>
+                <a href="./delivery.html">Доставка и оплата</a>
+                <a href="./news.html">Новости</a>
+                <a href="./shipments.html">Отгрузки</a>
+            </nav>
+        </div>
+        <div class="header-bottom">
+            <button class="btn btn-catalogue" data-modal="modal-catalogue">Каталог <img src="img/arrow-down.svg" alt="">
+            </button>
+            <form class="search">
+                <input type="search" placeholder="Поиск">
+                <button type="submit"></button>
+            </form>
+            <a href="./cart.html" class="btn btn-cart" data-cart="10"></a>
+        </div>
+    </header>
+
+    <nav class="path container">
+        <a href="./index.html">Главная</a>
+        <a href="./catalogue.html">Каталог</a>
+        <a href="./card.html">Картонная коробка 600х400х400 мм</a>
+    </nav>
+
+    <main class="card">
+        <div class="container wrap">
+            <!-- <span class="in_stock">В наличии</span>
+            <span class="discount">Скидка %</span> -->
+            <div class="card-img wrap">
+                <div class="card-nav">
+                    <div class="card-nav__item">
+                        <img src="img/product-1.jpg" alt="product">
+                    </div>
+                    <div class="card-nav__item">
+                        <img src="img/product-2.jpg" alt="product">
+                    </div>
+                    <div class="card-nav__item">
+                        <img src="img/product-3.jpg" alt="product">
+                    </div>
+                    <div class="card-nav__item">
+                        <img src="img/product-4.jpg" alt="product">
+                    </div>
+                    <div class="card-nav__item">
+                        <img src="img/product-2.jpg" alt="product">
+                    </div>
+                    <div class="card-nav__item">
+                        <img src="img/product-3.jpg" alt="product">
+                    </div>
+                </div>
+                <div class="card-slider">
+                    <div class="card-slider__item">
+                        <img src="img/product-1.jpg" alt="product">
+                    </div>
+                    <div class="card-slider__item">
+                        <img src="img/product-2.jpg" alt="product">
+                    </div>
+                    <div class="card-slider__item">
+                        <img src="img/product-3.jpg" alt="product">
+                    </div>
+                    <div class="card-slider__item">
+                        <img src="img/product-1.jpg" alt="product">
+                    </div>
+                    <div class="card-slider__item">
+                        <img src="img/product-2.jpg" alt="product">
+                    </div>
+                    <div class="card-slider__item">
+                        <img src="img/product-3.jpg" alt="product">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h1>Картонная коробка 600х400х400 мм</h1>
+                <div class="row">
+                    <span class="stars" data-amount="2">
+                        <i></i>
+                        <i></i>
+                        <i class="active"></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <span class="card__ar">Артикул: 152-456</span>
+                </div>
+                <div class="card-content-list">
+                    <h3 class="card__subheading">Характеристики</h3>
+                    <ul>
+                        <li>
+                            <b>Материал</b> <i>Гофрокартон</i>
+                        </li>
+                        <li>
+                            <b>Длина,мм</b> <i>600</i>
+                        </li>
+                        <li>
+                            <b>Ширина,мм</b> <i>400</i>
+                        </li>
+                        <li>
+                            <b>Высота,мм</b> <i>400</i>
+                        </li>
+                    </ul>
+                    <button class="product__link" data-tabBtn="3">Все характеристики</button>
+                </div>
+                <div class="wrap">
+                    <span class="card__price">
+                        1500 ₽ <s>2500 ₽ </s>
+                    </span>
+                    <div class="amount">
+                        <button class="amount__remove">–</button>
+                        <input type="text" value="10">
+                        <button class="amount__add">+</button>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <button class="btn">В корзину</button>
+                    <button class="btn btn_second">Купить сейчас</button>
+                </div>
+            </div>
+            <div class="card-info">
+                <div class="tab-btns wrap">
+                    <button data-tabBtn="1" class="tab__btn active">Информация</button>
+                    <button data-tabBtn="2" class="tab__btn">Отзывы (2)</button>
+                    <button data-tabBtn="3" class="tab__btn">Характеристики</button>
+                    <button data-tabBtn="4" class="tab__btn">Фото</button>
+                    <button data-tabBtn="5" class="tab__btn">Видео</button>
+                </div>
+                <div data-tabContent="1" class="tab-content active">
+                    <h3 class="tab__heading">Информация о товаре</h3>
+                    <p class="tab__text">
+                        Каждый из нас понимает очевидную вещь: социально-экономическое развитие предполагает независимые
+                        способы реализации дальнейших направлений развития. Кстати, некоторые особенности внутренней
+                        политики, вне зависимости от их уровня, должны быть функционально разнесены на независимые
+                        элементы.
+                        <br>
+                        <br>
+                        С другой стороны, глубокий уровень погружения позволяет оценить значение системы обучения
+                        кадров, соответствующей насущным потребностям. И нет сомнений, что базовые сценарии поведения
+                        пользователей освещают чрезвычайно интересные особенности картины в целом, однако конкретные
+                        выводы, разумеется, подвергнуты целой серии независимых исследований.
+                    </p>
+                </div>
+                <div data-tabContent="2" class="tab-content">
+                    <h3 class="tab__heading">Отзывы о товаре</h3>
+                    <div class="review">
+                        <div class="review-img">KM</div>
+                        <div class="row">
+                            <span class="review__name">Кирилл Морозов</span>
+                            <span class="stars">
+                                <i class="active"></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </div>
+                        <p class="review__time">13 мая 2023</p>
+                        <p class="review__text">
+                            Заказывали коробки с логотипом нашей организации, в большом колличестве. Консультировала
+                            менеджер (не запомнили её имя), все просьбы и тонкости оформления были соблюдены.
+                            Обязательно будем заказывать ещё!
+                        </p>
+                    </div>
+                    <div class="review">
+                        <div class="review-img">KM</div>
+                        <div class="row">
+                            <span class="review__name">Кирилл Морозов</span>
+                            <span class="stars">
+                                <i class="active"></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </div>
+                        <p class="review__time">13 мая 2023</p>
+                        <p class="review__text">
+                            Заказывали коробки с логотипом нашей организации, в большом колличестве. Консультировала
+                            менеджер (не запомнили её имя), все просьбы и тонкости оформления были соблюдены.
+                            Обязательно будем заказывать ещё!
+                        </p>
+                    </div>
+                </div>
+                <div data-tabContent="3" class="tab-content">
+                    <h3 class="tab__heading">Характеристики товара</h3>
+                    <ul>
+                        <li>
+                            <b>Материал</b> <i>Гофрокартон</i>
+                        </li>
+                        <li>
+                            <b>Длина,мм</b> <i>600</i>
+                        </li>
+                        <li>
+                            <b>Ширина,мм</b> <i>400</i>
+                        </li>
+                        <li>
+                            <b>Высота,мм</b> <i>400</i>
+                        </li>
+                        <li>
+                            <b>Полезный объём, л </b> <span>17,5</span>
+                        </li>
+                        <li>
+                            <b>Марка картона, мм </b> <span>Т-24 В</span>
+                        </li>
+                        <li>
+                            <b>Цвет </b> <span>Бурый</span>
+                        </li>
+                        <li>
+                            <b>Вес,г </b> <span>276</span>
+                        </li>
+                        <li>
+                            <b>Материал</b> <i>Гофрокартон</i>
+                        </li>
+                        <li>
+                            <b>Длина,мм</b> <i>600</i>
+                        </li>
+                        <li>
+                            <b>Ширина,мм</b> <i>400</i>
+                        </li>
+                        <li>
+                            <b>Высота,мм</b> <i>400</i>
+                        </li>
+                        <li>
+                            <b>Полезный объём, л </b> <span>17,5</span>
+                        </li>
+                        <li>
+                            <b>Марка картона, мм </b> <span>Т-24 В</span>
+                        </li>
+                        <li>
+                            <b>Цвет </b> <span>Бурый</span>
+                        </li>
+                        <li>
+                            <b>Вес,г </b> <span>276</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-tabContent="4" class="tab-content">
+                    <h3 class="tab__heading">Фото товара</h3>
+                    <div class="tab-slider">
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                        <div class="tab-slide">
+                            <img src="img/product-1.jpg" alt="product">
+                        </div>
+                    </div>
+                </div>
+                <div data-tabContent="5" class="tab-content">
+                    <h3 class="tab__heading">Фото товара</h3>
+                    <div class="tab-videos">
+                        <div class="tab-video">
+                            <iframe loading="lazy"></iframe>
+                        </div>
+                        <div class="tab-video">
+                            <video src="img/Jessi ZOOM MV.mp4" loading="lazy" controls></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="reviewTogler">Оставить отзыв</button>
+            <form action="#" class="review-form">
+                <button id="reviewClose">&#x2715;</button>
+                <div class="col">
+                    <p class="review-form__heading">Оставить отзыв</p>
+                    <fieldset class="stars-fieldset">
+                        <label>Оцените этот товар <i>*</i></label>
+                        <span class="stars fx">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <input type="number" required>
+                        </span>
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label>Ваше ФИО <i>*</i></label>
+                        <input type="text" required placeholder="Иванов Иван Сергеевич">
+                    </fieldset>
+                    <fieldset>
+                        <label>Ваш телефон <i>*</i></label>
+                        <input type="tel" required placeholder="+7 900 000 0000">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label>Текст отзыва <i>*</i></label>
+                        <textarea required name="address" rows="4" placeholder="Текст"></textarea>
+                    </fieldset>
+                    <p class="ordering__required">
+                        <b><i>*</i> Обязательно для заполнения</b> <br>
+                        Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
+                    </p>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <section class="bg">
+        <h2>Предложение для вас</h2>
+        <div class="product-slider shadow">
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <span class="discount">Скидка %</span>
+                    <img src="img/product-1.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Гибкая упаковка</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Печать БОПП</a>
+                    <a href="#" class="product__list">Печать с ламинацией</a>
+                    <a href="#" class="product__list">Продажа и резка пленки БОПП</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <span class="discount">Скидка %</span>
+                    <img src="img/product-2.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Пакеты</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Фасовочные пакеты</a>
+                    <a href="#" class="product__list">Флексопечать по ПВД</a>
+                    <a href="#" class="product__list">Флексопечать по ПНД</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <img src="img/product-3.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Самоклеющаяся этикетка</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Все виды этикеток</a>
+                    <a href="#" class="product__list">Наклейки, стикеры</a>
+                    <a href="#" class="product__list">Узкорулонная печать</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <img src="img/product-4.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Бумажные и крафт-пакеты</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Пакеты для строительных смесей</a>
+                    <a href="#" class="product__list">Пакеты для угля</a>
+                    <a href="#" class="product__list">Пакеты для наполнителя</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <span class="new">Новинка</span>
+                    <img src="img/product-5.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Гофротара</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Четырехклапанные короба</a>
+                    <a href="#" class="product__list">Короба со сложной высечкой</a>
+                    <a href="#" class="product__list">Печать по гофрокартону</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <span class="new">Новинка</span>
+                    <img src="img/product-6.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Бумажная тара</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Картонные втулки (гильзы, шпули)</a>
+                    <a href="#" class="product__list">Бумажные стаканчики</a>
+                    <a href="#" class="product__list">Одноразовая посуда</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <span class="new">Новинка</span>
+                    <img src="img/product-7.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Ролевая печать</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Печать листовок</a>
+                    <a href="#" class="product__list">Работа на давальческом сырье</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <img src="img/product-8.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Ламинатная туба</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Офсетные этикетки</a>
+                    <a href="#" class="product__list">Печать тубного ламината</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+            <div class="product product_big">
+                <div class="product-img">
+                    <span class="in_stock">В наличии</span>
+                    <img src="img/product-9.jpg" alt="product">
+                </div>
+                <div class="product-title">
+                    <p class="product__heading">Печать этикеток защиты</p>
+                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <a href="#" class="product__list">Продажа комплектующих</a>
+                    <a href="#" class="product__list">Печать наклеек</a>
+                </div>
+                <div class="wrap">
+                    <button class="sm btn">В корзину</button>
+                    <a href="#" class="sm btn btn_outline">Подробнее</a>
+                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container wrap">
+            <nav class="col">
+                <a href="#" class="logo">Упаковка-дешево.рф</a>
+                <a href="#">Каталог</a>
+                <a href="#">О нас</a>
+                <a href="#">Отгрузки</a>
+                <a href="#">Новости</a>
+                <a href="#">Доставка и оплата</a>
+            </nav>
+            <nav class="col">
+                <p class="footer__heading">Каталог</p>
+                <a href="#">Гибкая упаковка</a>
+                <a href="#">Бумажная тара</a>
+                <a href="#">Самоклеющаяся этикетка</a>
+                <a href="#">Бумажные и крафт-пакеты</a>
+                <a href="#">Гофротара</a>
+            </nav>
+            <nav class="col">
+                <p class="footer__heading">Каталог</p>
+                <a href="#">Пакеты</a>
+                <a href="#">Ролевая печать</a>
+                <a href="#">Ламинатная туба</a>
+                <a href="#">Офисные этикетки</a>
+            </nav>
+            <div class="col">
+                <p class="footer__heading">Контакты</p>
+                <p class="connect">
+                    <img src="img/location.svg" alt="img">
+                    г. Ногинск, 1-й Кардолентный пр., д.5
+                </p>
+                <p class="connect">
+                    <img src="img/time.svg" alt="img">
+                    Ежедневно с 9:00 до 18:00
+                </p>
+                <p class="connect">
+                    <img src="img/call.svg" alt="img">
+                    <a href="tel:+79103332600">+7(910)333-26-00</a>
+                    <a href="tel:+79103331540">+7(910)333-15-40</a>
+                </p>
+                <p class="connect">
+                    <img src="img/email.svg" alt="img">
+                    <a href="mailto:upakovka-deshevo@yandex.ru">upakovka-deshevo@yandex.ru</a>
+                </p>
+                <p class="footer__info">Узнавайте первыми о выгодных предложениях</p>
+                <div class="social">
+                    <a href="#" target="_blank"><img src="img/wa.png" alt="img"></a>
+                    <a href="#" target="_blank"><img src="img/vb.png" alt="img"></a>
+                    <a href="#" target="_blank"><img src="img/tg.png" alt="img"></a>
+                    <a href="#" target="_blank"><img src="img/vk.png" alt="img"></a>
+                    <a href="#" target="_blank"><img src="img/yt.png" alt="img"></a>
+                </div>
+            </div>
+        </div>
+        <p class="container footer-bottom">
+            Упаковка дешево в Ногинске © 2023 | Все права защищены
+        </p>
+    </footer>
+
+    <div class="modal modal-catalogue" id="modal-catalogue">
+        <div class="modal-content">
+            <button class="modal-close">&#x2715;</button>
+            <h2>Каталог</h2>
+            <div class="wrap">
+                <div class="item">
+                    <h3>Гибкая упаковка</h3>
+                    <ul>
+                        <li><a href="#">Печать БОПП, СПП, ПВД, ПНД</a></li>
+                        <li><a href="#">Печать с ламинацией</a></li>
+                        <li><a href="#">Продажа и резка пленки БОПП, СПП</a></li>
+                        <li><a href="#">Полистирол и полимерные материалы </a></li>
+                        <li><a href="#">Межслойная печать</a></li>
+                        <li><a href="#">Широкорулонная флексопечать</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3> Гофротара</h3>
+                    <ul>
+                        <li><a href="#">Четырехклапанные короба</a></li>
+                        <li><a href="#">Короба со сложной высечкой </a></li>
+                        <li><a href="#">Печать по гофрокартону</a></li>
+                        <li><a href="#">Четырехклапанные короба</a></li>
+                        <li><a href="#">Короба со сложной высечкой </a></li>
+                        <li><a href="#">Печать по гофрокартону</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Бумажные и крафт-пакеты</h3>
+                    <ul>
+                        <li><a href="#">Пакеты для строительных смесей</a></li>
+                        <li><a href="#">Пакеты для угля</a></li>
+                        <li><a href="#">Пакеты для наполнителя</a></li>
+                        <li><a href="#">Пакеты для строительных смесей</a></li>
+                        <li><a href="#">Пакеты для угля</a></li>
+                        <li><a href="#">Пакеты для наполнителя</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Ламинатная туба</h3>
+                    <ul>
+                        <li><a href="#">Печать тубного ламината</a></li>
+                        <li><a href="#">Продажа комплектующих</a></li>
+                        <li><a href="#">Тубирование</a></li>
+                        <li><a href="#">Печать тубного ламината</a></li>
+                        <li><a href="#">Продажа комплектующих</a></li>
+                        <li><a href="#">Тубирование</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Пакеты</h3>
+                    <ul>
+                        <li><a href="#">Фасовочные пакеты</a></li>
+                        <li><a href="#">Флексопечать по ПНД, ПВД, БОПП</a></li>
+                        <li><a href="#">Упаковка для продуктов</a></li>
+                        <li><a href="#">Фасовочные пакеты</a></li>
+                        <li><a href="#">Флексопечать по ПНД, ПВД, БОПП</a></li>
+                        <li><a href="#">Упаковка для продуктов</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3> Офсетные этикетки</h3>
+                    <ul>
+                        <li><a href="#">Печать этикеток защиты</a></li>
+                        <li><a href="#">Печать наклеек</a></li>
+                        <li><a href="#">Визитки</a></li>
+                        <li><a href="#">Печать этикеток защиты</a></li>
+                        <li><a href="#">Печать наклеек</a></li>
+                        <li><a href="#">Визитки</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Бумажная тара</h3>
+                    <ul>
+                        <li><a href="#">Картонные втулки (гильзы, шпули)</a></li>
+                        <li><a href="#">Бумажные стаканчики </a></li>
+                        <li><a href="#">Одноразовая посуда</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Самоклеющаяся этикетка</h3>
+                    <ul>
+                        <li><a href="#">Все виды этикеток</a></li>
+                        <li><a href="#">Наклейки, стикеры</a></li>
+                        <li><a href="#">Узкорулонная печать</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Ролевая печать</h3>
+                    <ul>
+                        <li><a href="#">Печать листовок</a></li>
+                        <li><a href="#">Работа на давальческом сырье</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="btn">Посмотреть все категории</a>
+        </div>
+    </div>
+
+    <div class="modal modal" id="modal-click">
+        <div class="modal-content">
+            <button class="modal-close">&#x2715;</button>
+            <h2>Быстрый заказ</h2>
+            <p>Заполните форму и мы вам перезвоним</p>
+            <form action="#">
+                <div class="inp-wrap">
+                    <label>Товар: <span class="name">Картонная коробка 600х400х400 мм</span></label>
+                    <input type="hidden" name="name">
+                </div>
+                <div class="inp-wrap">
+                    <label>Цена: <span class="price">1500 ₽ </span></label>
+                    <input type="hidden" name="price">
+                    <div class="amount">
+                        <a href="#" class="amount__remove">–</a>
+                        <input type="text" value="1">
+                        <a href="#" class="amount__add">+</a>
+                    </div>
+                </div>
+                <div class="inp-wrap">
+                    <label>Итог: <span class="total">15000 ₽</span></label>
+                    <input type="hidden" name="total">
+                </div>
+                <fieldset>
+                    <label>Ваше ФИО <i>*</i></label>
+                    <input type="text" required="" placeholder="Иванов Иван Сергеевич">
+                </fieldset>
+                <fieldset>
+                    <label>Ваш телефон <i>*</i></label>
+                    <input type="tel" required="" placeholder="+7 900 000 0000">
+                </fieldset>
+                <fieldset>
+                    <label>Текст отзыва <i>*</i></label>
+                    <textarea required="" name="address" rows="4" placeholder="Текст"></textarea>
+                </fieldset>
+                <p class="required">
+                    <b><i>*</i> Обязательно для заполнения</b> <br> <br>
+                    Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
+                </p>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>

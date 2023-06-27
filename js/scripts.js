@@ -14,6 +14,21 @@ $(document).ready(function () {
     });
 
     /*---------------------------------------------------end*/
+    $('.amount button, .amount a').on('click', function (e) {
+        e.preventDefault();
+        const inp = $(this).parent('.amount').children('input');
+        let count = inp.val();
+        if ($(this).hasClass('amount__add')) {
+            count++;
+        } else {
+            count--;
+            if (count <= 1) {
+                count = 1;
+            }
+        }
+        inp.val(count);
+    });
+    /*---------------------------------------------------end*/
 
     $('.sort-btn').click(function () {
         $(this).next('.sort-content').slideToggle(200);
@@ -23,15 +38,15 @@ $(document).ready(function () {
         $(this).parent('.sort-content').prev().text($(this).text());
         $(this).parent('.sort-content').prev().addClass('active');
     });
-    
+
     /*---------------------------------------------------end*/
-    
+
     $('.category-filter__show, .category-filter__ready').click(function () {
         $('.category-filter').fadeOut(300);
         $('.header').removeClass('down');
         $('body').removeClass('active');
     });
-    
+
     $('#filterShow').click(function () {
         $('.category-filter').fadeIn(300);
         $('.header').addClass('down');
@@ -77,6 +92,71 @@ $(document).ready(function () {
             )) {
                 hideModals();
             }
+        });
+    });
+
+    /*---------------------------------------------------end*/
+    $(document).ready(function () {
+        $('[data-tabBtn]').click(function () {
+            var tabBtnValue = $(this).attr('data-tabBtn');
+            $('[data-tabContent="' + tabBtnValue + '"]').addClass('active');
+            $('[data-tabContent]').not('[data-tabContent="' + tabBtnValue + '"]').removeClass('active');
+            $('[data-tabBtn]').removeClass('active');
+            if ($(this).hasClass('product__link')) {
+                $('html, body').animate({ scrollTop: $('[data-tabContent="' + tabBtnValue + '"]').offset().top - 100, }, 500,)
+                $('[data-tabBtn="' + tabBtnValue + '"]').addClass('active');
+            } else {
+                $(this).addClass('active');
+            } if (tabBtnValue == 4) {
+                // $('.tab-videos').slick('unslick');
+                $('.tab-slider').slick({
+                    dots: false,
+                    arrows: true,
+                    infinite: true,
+                    speed: 300,
+                    centerPadding: '',
+                    slidesToShow: 3,
+                    swipeToSlide: true,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    responsive: [
+                        {
+                            breakpoint: 700,
+                            settings: {
+                                slidesToShow: 1,
+                                variableWidth: false,
+                            }
+                        },
+                    ]
+                });
+            } else if (tabBtnValue == 5) {
+                // $('.tab-slider').slick('unslick');
+                $('.tab-videos').slick({
+                    dots: false,
+                    arrows: true,
+                    infinite: true,
+                    speed: 300,
+                    centerPadding: '',
+                    slidesToShow: 1,
+                    swipeToSlide: true,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    responsive: [
+                        {
+                            breakpoint: 700,
+                            settings: {
+                                variableWidth: false,
+                            }
+                        },
+                    ]
+                });
+            } else {
+                // $('.tab-slider').slick('unslick');
+                // $('.tab-videos').slick('unslick');
+            }
+
         });
     });
 
@@ -166,7 +246,71 @@ $(document).ready(function () {
                 $('#ordering_address').removeAttr('required');
             }
         });
+    }
 
+    /*---------------------------------------------------end*/
+    if ($('div').hasClass('card-img')) {
+        $('.card-slider').slick({
+            infinite: false,
+            speed: 300,
+            arrows: false,
+            dots: false,
+            swipeToSlide: true,
+            slidesToShow: 1,
+            asNavFor: '.card-nav',
+            touchThreshold: 9,
+            fade: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        fade: false,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        fade: false,
+                        infinite: true,
+                        dots: true,
+                    }
+                }
+            ]
+        });
+        $('.card-nav').slick({
+            vertical: true,
+            infinite: true,
+            draggable: true,
+            swipeToSlide: () => {
+                $('.card-nav__slide').lenght >= 3 ? ret = true : ret = false;
+                return ret;
+            },
+            dots: false,
+            focusOnSelect: true,
+            verticalSwiping: true,
+            arrows: true,
+            slidesToShow: 3,
+            centerPadding: '0',
+            slidesToScroll: 3,
+            asNavFor: '.card-slider',
+            centerMode: true,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        vertical: false,
+                        infinite: true,
+                        variableWidth: false,
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: "unslick"
+                }
+            ]
+        });
     }
 
     /*---------------------------------------------------end*/
