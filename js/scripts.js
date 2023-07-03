@@ -95,69 +95,92 @@ $(document).ready(function () {
         });
     });
 
-    /*---------------------------------------------------end*/
-    $(document).ready(function () {
-        $('[data-tabBtn]').click(function () {
-            var tabBtnValue = $(this).attr('data-tabBtn');
-            $('[data-tabContent="' + tabBtnValue + '"]').addClass('active');
-            $('[data-tabContent]').not('[data-tabContent="' + tabBtnValue + '"]').removeClass('active');
-            $('[data-tabBtn]').removeClass('active');
-            if ($(this).hasClass('product__link')) {
-                $('html, body').animate({ scrollTop: $('[data-tabContent="' + tabBtnValue + '"]').offset().top - 100, }, 500,)
-                $('[data-tabBtn="' + tabBtnValue + '"]').addClass('active');
-            } else {
-                $(this).addClass('active');
-            } if (tabBtnValue == 4) {
-                // $('.tab-videos').slick('unslick');
-                $('.tab-slider').slick({
-                    dots: false,
-                    arrows: true,
-                    infinite: true,
-                    speed: 300,
-                    centerPadding: '',
-                    slidesToShow: 3,
-                    swipeToSlide: true,
-                    centerMode: true,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                    responsive: [
-                        {
-                            breakpoint: 700,
-                            settings: {
-                                slidesToShow: 1,
-                                variableWidth: false,
-                            }
-                        },
-                    ]
-                });
-            } else if (tabBtnValue == 5) {
-                // $('.tab-slider').slick('unslick');
-                $('.tab-videos').slick({
-                    dots: false,
-                    arrows: true,
-                    infinite: true,
-                    speed: 300,
-                    centerPadding: '',
-                    slidesToShow: 1,
-                    swipeToSlide: true,
-                    centerMode: true,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                    responsive: [
-                        {
-                            breakpoint: 700,
-                            settings: {
-                                variableWidth: false,
-                            }
-                        },
-                    ]
-                });
-            } else {
-                // $('.tab-slider').slick('unslick');
-                // $('.tab-videos').slick('unslick');
-            }
+    function replaceItem(item) { return item.replace(/[^0-9.]/g, ""); }
 
-        });
+    $(document).on('click', '[data-modal="modal-click"]', function (e) {
+        var pParent = $(this).parents('.card-content');
+        pParent.length === 0 ? pParent = $(this).parents('.product') : false;
+        var pName = pParent.find('.p-name').text(),
+            pPrice = pParent.find('.p-price').text();
+        pAmount = pParent.find('.amount input').val();
+
+        pAmount == false ? pAmount == 1 : false;
+
+        $('#modal-click .name').text(pName);
+        $('#modal-click .price').text(pPrice);
+        $('#modal-click .amount input').val(pAmount);
+        $('#modal-click .total').text(replaceItem(pPrice) * pAmount + ' ₽');
+    });
+
+    $(document).on('click', '#modal-click .amount a', function (e) {
+        var amount = $('#modal-click .amount input').val();;
+        var price = $('#modal-click .price').text();
+        $('#modal-click .total').text(replaceItem(price) * amount + ' ₽');
+    });
+
+
+
+    /*---------------------------------------------------end*/
+    $('[data-tabBtn]').click(function () {
+        var tabBtnValue = $(this).attr('data-tabBtn');
+        $('[data-tabContent="' + tabBtnValue + '"]').addClass('active');
+        $('[data-tabContent]').not('[data-tabContent="' + tabBtnValue + '"]').removeClass('active');
+        $('[data-tabBtn]').removeClass('active');
+        if ($(this).hasClass('product__link')) {
+            $('html, body').animate({ scrollTop: $('[data-tabContent="' + tabBtnValue + '"]').offset().top - 100, }, 500,)
+            $('[data-tabBtn="' + tabBtnValue + '"]').addClass('active');
+        } else {
+            $(this).addClass('active');
+        } if (tabBtnValue == 4) {
+            $('.tab-slider').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 300,
+                centerPadding: '',
+                slidesToShow: 3,
+                swipeToSlide: true,
+                centerMode: true,
+                slidesToScroll: 1,
+                variableWidth: false,
+                responsive: [
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            slidesToShow: 1,
+                            variableWidth: false,
+                        }
+                    },
+                ]
+            });
+            $('.tab-videos').slick('unslick');
+        } else if (tabBtnValue == 5) {
+            $('.tab-videos').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 300,
+                centerPadding: '',
+                slidesToShow: 1,
+                swipeToSlide: true,
+                centerMode: true,
+                slidesToScroll: 1,
+                variableWidth: false,
+                responsive: [
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            variableWidth: true,
+                        }
+                    },
+                ]
+            });
+            $('.tab-slider').slick('unslick');
+        } else {
+            // $('.tab-slider').slick('unslick');
+            // $('.tab-videos').slick('unslick');
+        }
+
     });
 
     /*---------------------------------------------------end*/
@@ -190,7 +213,6 @@ $(document).ready(function () {
         if ($(window).width() < 700) {
             $(this).next('ul').slideToggle();
         }
-
     });
 
     $(document).on('click', '.show-more', function () {

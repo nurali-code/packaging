@@ -110,27 +110,31 @@
             padding: 6px 20px
 
     &#modal-click
-        display: block
+        // display: block
         h2
-            font-size: 36px
             margin-bottom: 12px
-        p
+
+        .descr
             font-size: 20px
             margin-bottom: 30px
             text-align: center
 
-        i 
+        i
             color: red
 
         .required
             text-align: left
-            
-            a 
+            b
+                display: block
+                margin-bottom: 8px
+
+            a
                 color: $prime
 
         .modal
             &-content
                 max-width: 600px
+
         .inp-wrap
             margin-bottom: 30px
             label
@@ -138,18 +142,17 @@
                 font-weight: 500
                 color: rgba($black, .7)
 
-            span
-                font-weight: 500
-                color: $black
+        span
+            font-weight: 500
+            color: $black
 
-            .price, .total
-                font-size: 32px
-                color: $third
+        .price, .total
+            font-size: 32px
+            color: $third
 
-            .amount
-                display: inline-flex
-                float: right
-
+        .amount
+            display: inline-flex
+            float: right
 
         .btn
             width: 100%
@@ -176,14 +179,13 @@
         &-close
             top: 24px
             right: 24px
-            width: 24px
             line-height: 25px
-            height: 24px
-            font-size: 14px
+            font-size: 24px
 
         &-catalogue
             .wrap
                 gap: 32px 0
+
             h3
                 font-size: 16px
                 margin-bottom: 8px
@@ -209,6 +211,47 @@
             .show-more
                 font-size: 14px
                 padding: 4px 14px
+
+        &#modal-click
+            .modal
+                &-content
+                    max-width: 512px
+                    padding: 40px 30px
+
+                &-close
+                    font-size: 28px
+
+            .descr
+                font-size: 18px
+                margin-bottom: 18px
+
+            .amount
+                display: inline-flex
+                float: none
+                margin-left: 20px
+                vertical-align: middle
+
+            .inp-wrap
+                margin-bottom: 15px
+
+            .price, .total
+                font-size: 24px
+
+            fieldset
+                margin-bottom: 16px
+                input
+                    height: 43px
+                    padding: 0 20px
+                textarea
+                    height: 186px
+
+            .required
+                text-align: left
+                font-size: 14px
+                b
+                    font-size: 16px
+                    display: block
+                    margin-bottom: 8px
 
     @media screen and ( max-width: 700px )
         &-content
@@ -286,3 +329,46 @@
             ul
                 display: none
                 padding: 0 16px 14px
+
+        &#modal-click
+            .modal
+                &-content
+                    padding: 40px 20px
+
+                &-close
+                    top: 12px
+                    right: 11px
+            .descr
+                display: none
+
+            .inp-wrap
+                margin-bottom: 6px
+                label
+                    font-size: 12px
+
+            .price
+                font-size: 14px
+
+            .total
+                font-size: 18px
+
+            fieldset
+                margin: 12px 0
+                input
+                    height: 36px
+                    padding: 0 10px
+                label
+                    font-size: 14px
+                    padding: 0 10px
+                    margin-bottom: 6px
+
+                textarea
+                    height: 110px
+
+            .required
+                text-align: left
+                font-size: 10px
+                margin-bottom: 16px
+                b
+                    font-size: 14px
+                    margin-bottom: 4px

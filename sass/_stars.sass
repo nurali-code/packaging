@@ -1,0 +1,101 @@
+
+.review-stars
+    display: flex
+    justify-content: flex-end
+    gap: 2px
+    label
+        text-shadow: 0px 0px 1px black
+
+/*end decoration*/
+
+.visuallyhidden
+    position: absolute !important
+    clip: rect(1px 1px 1px 1px)
+    clip: rect(1px, 1px, 1px, 1px)
+
+.review-stars label:after
+    content: "★"
+    color: inherit
+    -webkit-transform: scale(4)
+    position: absolute
+    z-index: 4
+    left: 0px
+    transition: all .4s
+    opacity: 0
+    color: inherit
+    visibility: hidden
+
+.review-stars input:checked + label:after
+    visibility: visible
+    -webkit-transform: scale(1)
+    opacity: 1
+    color: #f1c40f
+
+.review-stars
+    unicode-bidi: bidi-override
+    direction: rtl
+    width: 205px
+
+    label
+        font-size: 2em
+        position: relative
+        cursor: pointer
+        color: #DFE3E4
+
+    input:checked ~ label:before
+        opacity: 1
+        color: #f1c40f
+
+    &:hover input ~ label:before
+        opacity: 0
+
+    input + label:before
+        content: "\2605"
+        position: absolute
+        right: 0
+        opacity: 0
+        transition: opacity .3s ease-in-out, color .3s ease-in-out
+        backface-visibility: hidden
+
+.review-stars input + label:hover:before,
+.review-stars input + label:hover ~ label:before
+
+    color: #f1c40f
+    opacity: 1
+
+// .review-stars input + label:nth-of-type(1):after,
+// .review-stars input + label:nth-of-type(1):before,
+// .review-stars input +  label:nth-of-type(1):hover:before,
+// .review-stars input + label:nth-of-type(1):hover ~ label:before,
+// .review-stars input:nth-of-type(1):checked ~ label:before
+//     color: #2ecc71
+
+// .review-stars input + label:nth-of-type(2):after,
+// .review-stars input + label:nth-of-type(2):before,
+// .review-stars input + label:nth-of-type(2):hover:before,
+// .review-stars input + label:nth-of-type(2):hover ~ label:before,
+// .review-stars input:nth-of-type(2):checked ~ label:before
+//     color: #f1c40f
+
+// .review-stars input + label:nth-of-type(3):after,
+// .review-stars input + label:nth-of-type(3):before,
+// .review-stars input + label:nth-of-type(3):hover:before,
+// .review-stars input + label:nth-of-type(3):hover ~ label:before,
+// .review-stars input:nth-of-type(3):checked ~ label:before
+//     color: #F39C12
+
+// .review-stars input + label:nth-of-type(4):after,
+// .review-stars input + label:nth-of-type(4):before,
+// .review-stars input + label:nth-of-type(4):hover:before,
+// .review-stars input + label:nth-of-type(4):hover ~ label:before,
+// .review-stars input:nth-of-type(4):checked ~ label:before
+//     color: #e74c3c
+
+// .review-stars input + label:nth-of-type(5):after,
+// .review-stars input + label:nth-of-type(5):before,
+// .review-stars label:nth-of-type(5):hover:before,
+// .review-stars input:nth-of-type(5):checked ~ label:before
+//     color: #d35400
+
+// .review-stars label:nth-of-type(5):hover:before
+//     color: #d35400 !important

@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="card-content">
-                <h1>Картонная коробка 600х400х400 мм</h1>
+                <h1 class="p-name">Картонная коробка 600х400х400 мм</h1>
                 <div class="row">
                     <span class="stars" data-amount="2">
                         <i></i>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="wrap">
                     <span class="card__price">
-                        1500 ₽ <s>2500 ₽ </s>
+                        <span class="p-price">1500 ₽</span> <s>2500 ₽ </s>
                     </span>
                     <div class="amount">
                         <button class="amount__remove">–</button>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="wrap">
                     <button class="btn">В корзину</button>
-                    <button class="btn btn_second">Купить сейчас</button>
+                    <button class="btn btn_second" data-modal="modal-click">Купить сейчас</button>
                 </div>
             </div>
             <div class="card-info">
@@ -302,10 +302,10 @@
                     <h3 class="tab__heading">Фото товара</h3>
                     <div class="tab-videos">
                         <div class="tab-video">
-                            <iframe loading="lazy"></iframe>
+                            <video src="" loading="lazy" controls></video>
                         </div>
                         <div class="tab-video">
-                            <video src="img/Jessi ZOOM MV.mp4" loading="lazy" controls></video>
+                            <iframe src="" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -317,14 +317,18 @@
                     <p class="review-form__heading">Оставить отзыв</p>
                     <fieldset class="stars-fieldset">
                         <label>Оцените этот товар <i>*</i></label>
-                        <span class="stars fx">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <input type="number" required>
-                        </span>
+                        <div class="review-stars">
+                            <input type="radio" id="star5" name="rating" value="5" class="visuallyhidden" />
+                            <label for="star5" title="Rocks!">★</label>
+                            <input type="radio" id="star4" name="rating" value="4" class="visuallyhidden" />
+                            <label for="star4" title="Pretty good">★</label>
+                            <input type="radio" id="star3" name="rating" value="3" class="visuallyhidden" />
+                            <label for="star3" title="Meh">★</label>
+                            <input type="radio" id="star2" name="rating" value="2" class="visuallyhidden" />
+                            <label for="star2" title="Kinda bad">★</label>
+                            <input type="radio" id="star1" name="rating" value="1" class="visuallyhidden" />
+                            <label for="star1" title="Sucks big time">★</label>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="col">
@@ -363,7 +367,7 @@
                 </div>
                 <div class="product-title">
                     <p class="product__heading">Гибкая упаковка</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Печать БОПП</a>
                     <a href="#" class="product__list">Печать с ламинацией</a>
                     <a href="#" class="product__list">Продажа и резка пленки БОПП</a>
@@ -371,7 +375,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -381,8 +385,8 @@
                     <img src="img/product-2.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Пакеты</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Пакеты</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Фасовочные пакеты</a>
                     <a href="#" class="product__list">Флексопечать по ПВД</a>
                     <a href="#" class="product__list">Флексопечать по ПНД</a>
@@ -390,7 +394,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -399,8 +403,8 @@
                     <img src="img/product-3.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Самоклеющаяся этикетка</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Самоклеющаяся этикетка</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Все виды этикеток</a>
                     <a href="#" class="product__list">Наклейки, стикеры</a>
                     <a href="#" class="product__list">Узкорулонная печать</a>
@@ -408,7 +412,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -417,8 +421,8 @@
                     <img src="img/product-4.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Бумажные и крафт-пакеты</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Бумажные и крафт-пакеты</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Пакеты для строительных смесей</a>
                     <a href="#" class="product__list">Пакеты для угля</a>
                     <a href="#" class="product__list">Пакеты для наполнителя</a>
@@ -426,7 +430,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -436,8 +440,8 @@
                     <img src="img/product-5.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Гофротара</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Гофротара</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Четырехклапанные короба</a>
                     <a href="#" class="product__list">Короба со сложной высечкой</a>
                     <a href="#" class="product__list">Печать по гофрокартону</a>
@@ -445,7 +449,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -455,8 +459,8 @@
                     <img src="img/product-6.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Бумажная тара</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Бумажная тара</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Картонные втулки (гильзы, шпули)</a>
                     <a href="#" class="product__list">Бумажные стаканчики</a>
                     <a href="#" class="product__list">Одноразовая посуда</a>
@@ -464,7 +468,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -474,15 +478,15 @@
                     <img src="img/product-7.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Ролевая печать</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Ролевая печать</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Печать листовок</a>
                     <a href="#" class="product__list">Работа на давальческом сырье</a>
                 </div>
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -491,15 +495,15 @@
                     <img src="img/product-8.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Ламинатная туба</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Ламинатная туба</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Офсетные этикетки</a>
                     <a href="#" class="product__list">Печать тубного ламината</a>
                 </div>
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="product product_big">
@@ -508,15 +512,15 @@
                     <img src="img/product-9.jpg" alt="product">
                 </div>
                 <div class="product-title">
-                    <p class="product__heading">Печать этикеток защиты</p>
-                    <p class="product__price">Цена <i>1500 ₽</i></p>
+                    <p class="p-name product__heading">Печать этикеток защиты</p>
+                    <p class="product__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="product__list">Продажа комплектующих</a>
                     <a href="#" class="product__list">Печать наклеек</a>
                 </div>
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
                 </div>
             </div>
         </div>
@@ -684,7 +688,7 @@
         <div class="modal-content">
             <button class="modal-close">&#x2715;</button>
             <h2>Быстрый заказ</h2>
-            <p>Заполните форму и мы вам перезвоним</p>
+            <p class="descr">Заполните форму и мы вам перезвоним</p>
             <form action="#">
                 <div class="inp-wrap">
                     <label>Товар: <span class="name">Картонная коробка 600х400х400 мм</span></label>
@@ -716,7 +720,7 @@
                     <textarea required="" name="address" rows="4" placeholder="Текст"></textarea>
                 </fieldset>
                 <p class="required">
-                    <b><i>*</i> Обязательно для заполнения</b> <br> <br>
+                    <b><i>*</i> Обязательно для заполнения</b>
                     Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
                 </p>
                 <button type="submit" class="btn">Отправить</button>
