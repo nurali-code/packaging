@@ -95,32 +95,84 @@ $(document).ready(function () {
         });
     });
 
-    function replaceItem(item) { return item.replace(/[^0-9.]/g, ""); }
+    function replaceItem(item) { return Number(item.replace(/[^0-9]/g, "")); }
+    function numberWithSpaces(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") };
+
 
     $(document).on('click', '[data-modal="modal-click"]', function (e) {
-        var pParent = $(this).parents('.card-content');
-        pParent.length === 0 ? pParent = $(this).parents('.product') : false;
-        var pName = pParent.find('.p-name').text(),
-            pPrice = pParent.find('.p-price').text();
-        pAmount = pParent.find('.amount input').val();
+        var pParent = $(this).parents('.card-content'),
+            pAmount = pParent.find('.amount input').val();
 
-        pAmount == false ? pAmount == 1 : false;
+        if (pParent.length === 0) {
+            pParent = $(this).parents('.product');
+            pAmount = 1;
+        }
+
+        var pName = pParent.find('.p-name').text(),
+            pPrice = replaceItem(pParent.find('.p-price').text());
+
+        console.log(pAmount);
 
         $('#modal-click .name').text(pName);
-        $('#modal-click .price').text(pPrice);
+        $('#modal-click input[name="name"]').val(pName);
+        $('#modal-click .price').text(numberWithSpaces(pPrice));
+        $('#modal-click input[name="price"]').val(pPrice);
         $('#modal-click .amount input').val(pAmount);
-        $('#modal-click .total').text(replaceItem(pPrice) * pAmount + ' ₽');
+        $('#modal-click .total').text(numberWithSpaces(replaceItem(pPrice) * pAmount) + ' ₽');
+        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(pPrice) * pAmount) + ' ₽');
     });
 
     $(document).on('click', '#modal-click .amount a', function (e) {
-        var amount = $('#modal-click .amount input').val();;
+        var amount = $('#modal-click .amount input').val();
         var price = $('#modal-click .price').text();
-        $('#modal-click .total').text(replaceItem(price) * amount + ' ₽');
+        $('#modal-click .total').text(numberWithSpaces(replaceItem(price) * amount) + ' ₽');
+        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(price) * amount) + ' ₽');
+    });
+
+    /*---------------------------------------------------end*/
+
+    $(document).on('click', '.cart-item__delete', function (e) {
+        var parentItem = $(this).parent('.cart-item');
+        parentItem.find('.amount, .cart-item__delete, .cart-item__price, .cart-item__total').addClass('hidden-element').hide();
+        if (window.innerWidth <= 1200) {
+            parentItem.find('.cart-item__img, .cart-item__heading').addClass('hidden-element').hide();
+        }
+        parentItem.append('<button class="cart-item__recover">Вернуть в корзину</button>');
+    });
+
+    $(document).on('click', '.cart-item__recover', function (e) {
+        var parentItem = $(this).closest('.cart-item');
+        parentItem.find('.hidden-element').removeClass('hidden-element').show();
+        $(this).remove();
     });
 
 
 
+    $(document).on('click', '.cart-item button', function (e) {
+        var amount = $(this).parents('.cart-item').find('input').val(),
+            price = replaceItem($(this).parents('.cart-item').find('.cart-item__price').text()),
+            total = $(this).parents('.cart-item').find('.cart-item__total');
+        total.text(numberWithSpaces(price * amount) + ' ₽');
+        totalCount()
+    });
+
+    function totalCount() {
+        var totalPrice = 0;
+        var totalItems = $('.cart-item');
+        if (totalItems.length == 0) {
+            $('.total__price').text('0.000 ₽')
+        } else {
+            for (let index = 0; index < totalItems.length; index++) {
+                const element = totalItems[index];
+                totalPrice += replaceItem($(element).find('.cart-item__total').text());
+                $('.total__price').text(numberWithSpaces(totalPrice) + ' ₽')
+            }
+        }
+    } totalCount()
+
+
     /*---------------------------------------------------end*/
+
     $('[data-tabBtn]').click(function () {
         var tabBtnValue = $(this).attr('data-tabBtn');
         $('[data-tabContent="' + tabBtnValue + '"]').addClass('active');
@@ -202,8 +254,7 @@ $(document).ready(function () {
             $('.show-more').remove();
             $('#modal-catalogue ul li').show();
         }
-    }
-    handleResponsive();
+    } handleResponsive();
 
     $(window).resize(function () {
         handleResponsive();

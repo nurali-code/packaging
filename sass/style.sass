@@ -456,6 +456,12 @@ article
             background-position: center center
             background-size: 30px 30px
 
+        &__recover
+            font-size: 24px
+            font-weight: 600
+            display: inline-block
+            padding: 4px
+
     .total
         padding: 34px 0
         margin: 0
@@ -475,6 +481,23 @@ article
         justify-content: flex-end
         .btn
             margin: 0 15px
+
+    &-empty
+        text-align: center
+        padding-bottom: 60px
+        .wrap
+            justify-content: center
+            gap: 60px
+
+        p
+            max-width: 658px
+            margin: 0 auto 60px
+            font-size: 28px
+            a
+                color: $prime
+
+        .btn
+            min-width: 277px
 
 .ordering
     text-align: left
@@ -837,7 +860,7 @@ article
             cursor: pointer
             &:first-child
                 display: block
-                
+
             img
                 opacity: .5
                 width: 100%
@@ -1243,7 +1266,7 @@ article
             margin-bottom: 20px
 
     .cart
-        padding-bottom: 40px
+        padding: 20px 0 40px
         .path
             padding: 16px 0
 
@@ -1282,6 +1305,10 @@ article
             &__total
                 margin-right: 0 !important
 
+            &__recover
+                font-size: 14px
+                font-weight: 500
+
         .total
             padding: 18px 0
             border-top: 1px solid rgba(9, 43, 14, 0.30)
@@ -1294,6 +1321,19 @@ article
         &-footer
             .btn
                 margin: 0 8px
+
+        &-empty
+            padding-bottom: 40px
+            .wrap
+                gap: 30px
+
+            p
+                max-width: 356px
+                margin: 0 auto 30px
+                font-size: 14px
+
+            .btn
+                min-width: 132px
 
     .ordering
         padding: 20px 0 40px
@@ -1665,6 +1705,19 @@ article
                     margin: 0
                     &::before
                         display: none
+
+        &-empty
+            padding-bottom: 0
+            .wrap
+                gap: 8px
+
+            p
+                margin: 0 auto 28px
+
+            .btn
+                min-width: unset
+                width: 100%
+                max-width: 400px
 
     .ordering
         .path

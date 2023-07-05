@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=12234">
 </head>
 
 <body>
@@ -61,300 +61,25 @@
         </div>
     </header>
 
-    <nav class="path container">
-        <a href="./index.html">Главная</a>
-        <a href="./catalogue.html">Каталог</a>
-        <a href="./card.html">Картонная коробка 600х400х400 мм</a>
-    </nav>
+    <section class="cart">
+        <div class="container">
+            <nav class="path">
+                <a href="./index.html">Главная</a>
+                <a href="./cart.html">Корзина</a>
+            </nav>
 
-    <main class="card">
-        <div class="container wrap">
-            <!-- <span class="in_stock">В наличии</span>
-            <span class="discount">Скидка %</span> -->
-            <div class="card-img wrap">
-                <div class="card-nav">
-                    <div class="card-nav__item">
-                        <img src="img/product-1.jpg" alt="product">
-                    </div>
-                    <div class="card-nav__item">
-                        <img src="img/product-2.jpg" alt="product">
-                    </div>
-                    <div class="card-nav__item">
-                        <img src="img/product-3.jpg" alt="product">
-                    </div>
-                    <div class="card-nav__item">
-                        <img src="img/product-4.jpg" alt="product">
-                    </div>
-                    <div class="card-nav__item">
-                        <img src="img/product-2.jpg" alt="product">
-                    </div>
-                    <div class="card-nav__item">
-                        <img src="img/product-3.jpg" alt="product">
-                    </div>
-                </div>
-                <div class="card-slider">
-                    <div class="card-slider__item">
-                        <img src="img/product-1.jpg" alt="product">
-                    </div>
-                    <div class="card-slider__item">
-                        <img src="img/product-2.jpg" alt="product">
-                    </div>
-                    <div class="card-slider__item">
-                        <img src="img/product-3.jpg" alt="product">
-                    </div>
-                    <div class="card-slider__item">
-                        <img src="img/product-1.jpg" alt="product">
-                    </div>
-                    <div class="card-slider__item">
-                        <img src="img/product-2.jpg" alt="product">
-                    </div>
-                    <div class="card-slider__item">
-                        <img src="img/product-3.jpg" alt="product">
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <h1 class="p-name">Картонная коробка 600х400х400 мм</h1>
-                <div class="row">
-                    <span class="stars" data-amount="2">
-                        <i></i>
-                        <i></i>
-                        <i class="active"></i>
-                        <i></i>
-                        <i></i>
-                    </span>
-                    <span class="card__ar">Артикул: 152-456</span>
-                </div>
-                <div class="card-content-list">
-                    <h3 class="card__subheading">Характеристики</h3>
-                    <ul>
-                        <li>
-                            <b>Материал</b> <i>Гофрокартон</i>
-                        </li>
-                        <li>
-                            <b>Длина,мм</b> <i>600</i>
-                        </li>
-                        <li>
-                            <b>Ширина,мм</b> <i>400</i>
-                        </li>
-                        <li>
-                            <b>Высота,мм</b> <i>400</i>
-                        </li>
-                    </ul>
-                    <button class="product__link" data-tabBtn="3">Все характеристики</button>
-                </div>
+            <div class="cart-empty">
+                <h1>Корзина пуста</h1>
+                <p>
+                    Посмотрите предложения на <a href="./index.html">главной  странице</a>, воспользуйтесь <a href="./catalogue.html">каталогом</a> или поиском.
+                </p>
                 <div class="wrap">
-                    <span class="card__price">
-                        <span class="p-price">1500 ₽</span> <s>2500 ₽ </s>
-                    </span>
-                    <div class="amount">
-                        <button class="amount__remove">–</button>
-                        <input type="text" value="10">
-                        <button class="amount__add">+</button>
-                    </div>
-                </div>
-                <div class="wrap">
-                    <button class="btn">В корзину</button>
-                    <button class="btn btn_second" data-modal="modal-click">Купить сейчас</button>
+                    <a href="./index.html" class="btn btn_outline">На главную</a>
+                    <a href="./catalogue.html" class="btn">В каталог</a>
                 </div>
             </div>
-            <div class="card-info">
-                <div class="tab-btns wrap">
-                    <button data-tabBtn="1" class="tab__btn active">Информация</button>
-                    <button data-tabBtn="2" class="tab__btn">Отзывы (2)</button>
-                    <button data-tabBtn="3" class="tab__btn">Характеристики</button>
-                    <button data-tabBtn="4" class="tab__btn">Фото</button>
-                    <button data-tabBtn="5" class="tab__btn">Видео</button>
-                </div>
-                <div data-tabContent="1" class="tab-content active">
-                    <h3 class="tab__heading">Информация о товаре</h3>
-                    <p class="tab__text">
-                        Каждый из нас понимает очевидную вещь: социально-экономическое развитие предполагает независимые
-                        способы реализации дальнейших направлений развития. Кстати, некоторые особенности внутренней
-                        политики, вне зависимости от их уровня, должны быть функционально разнесены на независимые
-                        элементы.
-                        <br>
-                        <br>
-                        С другой стороны, глубокий уровень погружения позволяет оценить значение системы обучения
-                        кадров, соответствующей насущным потребностям. И нет сомнений, что базовые сценарии поведения
-                        пользователей освещают чрезвычайно интересные особенности картины в целом, однако конкретные
-                        выводы, разумеется, подвергнуты целой серии независимых исследований.
-                    </p>
-                </div>
-                <div data-tabContent="2" class="tab-content">
-                    <h3 class="tab__heading">Отзывы о товаре</h3>
-                    <div class="review">
-                        <div class="review-img">KM</div>
-                        <div class="row">
-                            <span class="review__name">Кирилл Морозов</span>
-                            <span class="stars">
-                                <i class="active"></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </span>
-                        </div>
-                        <p class="review__time">13 мая 2023</p>
-                        <p class="review__text">
-                            Заказывали коробки с логотипом нашей организации, в большом колличестве. Консультировала
-                            менеджер (не запомнили её имя), все просьбы и тонкости оформления были соблюдены.
-                            Обязательно будем заказывать ещё!
-                        </p>
-                    </div>
-                    <div class="review">
-                        <div class="review-img">KM</div>
-                        <div class="row">
-                            <span class="review__name">Кирилл Морозов</span>
-                            <span class="stars">
-                                <i class="active"></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </span>
-                        </div>
-                        <p class="review__time">13 мая 2023</p>
-                        <p class="review__text">
-                            Заказывали коробки с логотипом нашей организации, в большом колличестве. Консультировала
-                            менеджер (не запомнили её имя), все просьбы и тонкости оформления были соблюдены.
-                            Обязательно будем заказывать ещё!
-                        </p>
-                    </div>
-                </div>
-                <div data-tabContent="3" class="tab-content">
-                    <h3 class="tab__heading">Характеристики товара</h3>
-                    <ul>
-                        <li>
-                            <b>Материал</b> <i>Гофрокартон</i>
-                        </li>
-                        <li>
-                            <b>Длина,мм</b> <i>600</i>
-                        </li>
-                        <li>
-                            <b>Ширина,мм</b> <i>400</i>
-                        </li>
-                        <li>
-                            <b>Высота,мм</b> <i>400</i>
-                        </li>
-                        <li>
-                            <b>Полезный объём, л </b> <span>17,5</span>
-                        </li>
-                        <li>
-                            <b>Марка картона, мм </b> <span>Т-24 В</span>
-                        </li>
-                        <li>
-                            <b>Цвет </b> <span>Бурый</span>
-                        </li>
-                        <li>
-                            <b>Вес,г </b> <span>276</span>
-                        </li>
-                        <li>
-                            <b>Материал</b> <i>Гофрокартон</i>
-                        </li>
-                        <li>
-                            <b>Длина,мм</b> <i>600</i>
-                        </li>
-                        <li>
-                            <b>Ширина,мм</b> <i>400</i>
-                        </li>
-                        <li>
-                            <b>Высота,мм</b> <i>400</i>
-                        </li>
-                        <li>
-                            <b>Полезный объём, л </b> <span>17,5</span>
-                        </li>
-                        <li>
-                            <b>Марка картона, мм </b> <span>Т-24 В</span>
-                        </li>
-                        <li>
-                            <b>Цвет </b> <span>Бурый</span>
-                        </li>
-                        <li>
-                            <b>Вес,г </b> <span>276</span>
-                        </li>
-                    </ul>
-                </div>
-                <div data-tabContent="4" class="tab-content">
-                    <h3 class="tab__heading">Фото товара</h3>
-                    <div class="tab-slider">
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                        <div class="tab-slide">
-                            <img src="img/product-1.jpg" alt="product">
-                        </div>
-                    </div>
-                </div>
-                <div data-tabContent="5" class="tab-content">
-                    <h3 class="tab__heading">Фото товара</h3>
-                    <div class="tab-videos">
-                        <div class="tab-video">
-                            <video src="" loading="lazy" controls></video>
-                        </div>
-                        <div class="tab-video">
-                            <iframe src="" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="btn" id="reviewTogler">Оставить отзыв</button>
-            <form action="#" class="review-form">
-                <button id="reviewClose">&#x2715;</button>
-                <div class="col">
-                    <p class="review-form__heading">Оставить отзыв</p>
-                    <fieldset class="stars-fieldset">
-                        <label>Оцените этот товар <i>*</i></label>
-                        <div class="review-stars">
-                            <input type="radio" id="star5" name="rating" value="5" class="visuallyhidden" />
-                            <label for="star5" title="Rocks!">★</label>
-                            <input type="radio" id="star4" name="rating" value="4" class="visuallyhidden" />
-                            <label for="star4" title="Pretty good">★</label>
-                            <input type="radio" id="star3" name="rating" value="3" class="visuallyhidden" />
-                            <label for="star3" title="Meh">★</label>
-                            <input type="radio" id="star2" name="rating" value="2" class="visuallyhidden" />
-                            <label for="star2" title="Kinda bad">★</label>
-                            <input type="radio" id="star1" name="rating" value="1" class="visuallyhidden" />
-                            <label for="star1" title="Sucks big time">★</label>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset>
-                        <label>Ваше ФИО <i>*</i></label>
-                        <input type="text" required placeholder="Иванов Иван Сергеевич">
-                    </fieldset>
-                    <fieldset>
-                        <label>Ваш телефон <i>*</i></label>
-                        <input type="tel" required placeholder="+7 900 000 0000">
-                    </fieldset>
-                </div>
-                <div class="col">
-                    <fieldset>
-                        <label>Текст отзыва <i>*</i></label>
-                        <textarea required name="address" rows="4" placeholder="Текст"></textarea>
-                    </fieldset>
-                    <p class="ordering__required">
-                        <b><i>*</i> Обязательно для заполнения</b> <br>
-                        Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
-                    </p>
-                    <button type="submit" class="btn">Отправить</button>
-                </div>
-            </form>
         </div>
-    </main>
+    </section>
 
     <section class="bg">
         <h2>Предложение для вас</h2>
@@ -684,53 +409,9 @@
         </div>
     </div>
 
-    <div class="modal modal" id="modal-click">
-        <div class="modal-content">
-            <button class="modal-close">&#x2715;</button>
-            <h2>Быстрый заказ</h2>
-            <p class="descr">Заполните форму и мы вам перезвоним</p>
-            <form action="#">
-                <div class="inp-wrap">
-                    <label>Товар: <span class="name">Картонная коробка 600х400х400 мм</span></label>
-                    <input type="hidden" name="name">
-                </div>
-                <div class="inp-wrap">
-                    <label>Цена: <span class="price">1500 ₽ </span></label>
-                    <input type="hidden" name="price">
-                    <div class="amount">
-                        <a href="#" class="amount__remove">–</a>
-                        <input type="text" value="1">
-                        <a href="#" class="amount__add">+</a>
-                    </div>
-                </div>
-                <div class="inp-wrap">
-                    <label>Итог: <span class="total">15000 ₽</span></label>
-                    <input type="hidden" name="total">
-                </div>
-                <fieldset>
-                    <label>Ваше ФИО <i>*</i></label>
-                    <input type="text" required="" placeholder="Иванов Иван Сергеевич">
-                </fieldset>
-                <fieldset>
-                    <label>Ваш телефон <i>*</i></label>
-                    <input type="tel" required="" placeholder="+7 900 000 0000">
-                </fieldset>
-                <fieldset>
-                    <label>Текст отзыва <i>*</i></label>
-                    <textarea required="" name="address" rows="4" placeholder="Текст"></textarea>
-                </fieldset>
-                <p class="required">
-                    <b><i>*</i> Обязательно для заполнения</b>
-                    Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
-                </p>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
-        </div>
-    </div>
-
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/slick.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js?ver=12234"></script>
 </body>
 
 </html>
