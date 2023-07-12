@@ -14,7 +14,7 @@
     &-middle,
     &-bottom,
     .navbar,
-    .navbar .menu
+    .menu
         display: flex
         align-items: center
         justify-content: space-between
@@ -47,11 +47,14 @@
             padding: 8px 24px
             border-radius: 8px
             @media screen and ( min-width: 1200px )
-                &.active
-                    background-color: $third
                 &:hover
                     opacity: 1
                     background-color: rgba($third, .5)
+
+        .current-menu-item
+            @media screen and ( min-width: 1200px )
+                a
+                    background-color: $third !important
 
     .search
         margin: 0 24px 0 auto
