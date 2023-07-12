@@ -13,7 +13,8 @@
     &-top,
     &-middle,
     &-bottom,
-    .navbar
+    .navbar,
+    .navbar .menu
         display: flex
         align-items: center
         justify-content: space-between
@@ -28,9 +29,12 @@
         list-style: none
         padding: 0
         margin: 0
-        li 
+        li
             padding: 0
             margin: 0
+
+    .menu
+        width: 100%
 
     .navbar
         width: 77%
@@ -128,6 +132,9 @@
                 filter: grayscale(10)
                 &:hover, &:active
                     filter: grayscale(0)
+
+            .menu
+                display: block
 
         .search
             margin: 0 auto
