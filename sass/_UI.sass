@@ -7,7 +7,7 @@
 
 .sliders_control
     position: relative
-    margin: 24px 0
+    margin: 10px 0
     width: 100%
 
 .form
@@ -18,9 +18,9 @@
         font-size: 24px
         label
             display: inline-flex
-            width: 48%
+            width: 47%
             align-items: center
-            margin-bottom: 10px
+            margin-bottom: 20px
         i
             font-size: 20px
             font-style: normal
@@ -37,6 +37,7 @@ input
         height: 3px
         top: 0
         width: 100%
+        max-width: 100% !important
         position: absolute
         background-color: $third
         border: none !important
@@ -80,3 +81,13 @@ input[type=number]::-webkit-outer-spin-button
 #fromSlider
     height: 0
     z-index: 1
+
+
+@media screen and ( max-width: 1200px )
+    .form
+        &_control
+            label 
+                margin-bottom: 16px
+            i
+                font-size: 16px
+                margin-right: 4px
