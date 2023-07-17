@@ -54,8 +54,18 @@
             <button class="btn btn-catalogue" data-modal="modal-catalogue">Каталог <img src="img/arrow-down.svg" alt="">
             </button>
             <form class="search">
-                <input type="search" placeholder="Поиск">
+                <input type="search" class="search__inp" placeholder="Поиск">
+                <button type="reset" class="search__reset">&#x2715;</button>
                 <button type="submit"></button>
+                <div class="search-content">
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#">Картонная коробка 600х400х400 мм</a>
+                    <a href="#"><b>Все результаты</b></a>
+                </div>
             </form>
             <a href="./cart.html" class="btn btn-cart" data-cart="10"></a>
         </div>
@@ -491,7 +501,7 @@
     <div class="modal modal" id="modal-click">
         <div class="modal-content">
             <button class="modal-close">&#x2715;</button>
-            <h2>Быстрый заказ</h2>
+            <h2>Заказать услугу</h2>
             <p class="descr">Заполните форму и мы вам перезвоним</p>
             <form action="#">
                 <div class="inp-wrap">
@@ -501,15 +511,6 @@
                 <div class="inp-wrap">
                     <label>Цена: <span class="price">1500 ₽ </span></label>
                     <input type="hidden" name="price">
-                    <div class="amount">
-                        <a href="#" class="amount__remove">–</a>
-                        <input type="text" value="1">
-                        <a href="#" class="amount__add">+</a>
-                    </div>
-                </div>
-                <div class="inp-wrap">
-                    <label>Итог: <span class="total">15000 ₽</span></label>
-                    <input type="hidden" name="total">
                 </div>
                 <fieldset>
                     <label>Ваше ФИО <i>*</i></label>

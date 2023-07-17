@@ -7,6 +7,21 @@ $(document).ready(function () {
     })
 
     /*---------------------------------------------------end*/
+    $('.search__inp').on('keyup', function (e) {
+        if ($(this).val().length == 0) {
+            $('.search__reset').fadeOut(200);
+            $('.search-content').slideUp(200);
+        } else {
+            $('.search__reset').fadeIn(200);
+            $('.search-content').slideDown(200);
+        }
+    });
+    $('.search__reset').on('click', function (e) {
+        $(this).fadeOut(200);
+        $('.search-content').slideUp(200);
+    });
+
+    /*---------------------------------------------------end*/
 
     $('.dropdown-btn').click(function () {
         $(this).next('.dropdown-content').slideToggle();
@@ -149,6 +164,7 @@ $(document).ready(function () {
         $(this).remove();
         totalCount();
     });
+
     $(document).on('click', '.cart__clear', function (e) {
         $('.cart-item').remove();
         $('.cart_order').attr('disabled', 'true');
