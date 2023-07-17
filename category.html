@@ -70,11 +70,11 @@
     <main class="category">
         <div class="container wrap">
             <button class="btn btn_second" id="filterShow">Фильтры</button>
-            <div class="category-filter">
+            <form class="category-filter">
                 <p class="category-filter__heading">Фильтры</p>
-                <button class="category-filter__ready">Готово</button>
+                <button type="submit" class="category-filter__ready">Готово</button>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Размер упаковки</button>
+                    <p class="dropdown-btn">Размер упаковки</p>
                     <fieldset class="dropdown-content">
                         <div class="inp-radio">
                             <input type="checkbox" id="dimension1" value="Габарит S">
@@ -95,7 +95,28 @@
                     </fieldset>
                 </div>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Очень важный параметр</button>
+                    <p class="dropdown-btn">Цена</p>
+                    <div class="dropdown-content active">
+                        <fieldset class="range_container">
+                            <div class="form_control">
+                                <label for="fromInput">
+                                    <i>От</i>
+                                    <input type="number" id="fromInput" value="1500" min="1500" max="9900" />
+                                </label>
+                                <label for="toInput">
+                                    <i>До</i>
+                                    <input type="number" id="toInput" value="9900" min="1500" max="9900" />
+                                </label>
+                            </div>
+                            <div class="sliders_control">
+                                <input id="fromSlider" type="range" value="1500" min="1500" max="9900" />
+                                <input id="toSlider" type="range" value="9900" min="1500" max="9900" />
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <p class="dropdown-btn">Очень важный параметр</p>
                     <fieldset class="dropdown-content">
                         <div class="inp-radio">
                             <input type="checkbox" id="dimension11" value="Габарит S">
@@ -112,7 +133,7 @@
                     </fieldset>
                 </div>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Размер упаковки</button>
+                    <p class="dropdown-btn">Размер упаковки</p>
                     <fieldset class="dropdown-content">
                         <div class="inp-radio">
                             <input type="checkbox" id="dimension10" value="Габарит S">
@@ -132,9 +153,9 @@
                         </div>
                     </fieldset>
                 </div>
-                <button class="btn category-filter__show">Показать</button>
-                <button class="category-filter__recet">Сбросить <b>фильтр &#x2715;</b></button>
-            </div>
+                <button class="btn category-filter__show" type="submit">Показать</button>
+                <button class="category-filter__recet" type="reset">Сбросить <b>фильтр &#x2715;</b></button>
+            </form>
             <div class="category-content">
                 <div class="filter">
                     <button class="filter__btn">Гофроупаковка </button>
@@ -709,6 +730,7 @@
 
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/range.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 

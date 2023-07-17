@@ -134,41 +134,51 @@ $(document).ready(function () {
     $(document).on('click', '.cart-item__delete', function (e) {
         var parentItem = $(this).parent('.cart-item');
         parentItem.find('.amount, .cart-item__delete, .cart-item__price, .cart-item__total').addClass('hidden-element').hide();
+        parentItem.addClass('removed')
         if (window.innerWidth <= 1200) {
             parentItem.find('.cart-item__img, .cart-item__heading').addClass('hidden-element').hide();
         }
         parentItem.append('<button class="cart-item__recover">Вернуть в корзину</button>');
+        totalCount();
     });
 
     $(document).on('click', '.cart-item__recover', function (e) {
         var parentItem = $(this).closest('.cart-item');
         parentItem.find('.hidden-element').removeClass('hidden-element').show();
+        parentItem.removeClass('removed')
         $(this).remove();
+        totalCount();
     });
-
-
+    $(document).on('click', '.cart__clear', function (e) {
+        $('.cart-item').remove();
+        $('.cart_order').attr('disabled', 'true');
+        totalCount();
+    });
 
     $(document).on('click', '.cart-item button', function (e) {
         var amount = $(this).parents('.cart-item').find('input').val(),
             price = replaceItem($(this).parents('.cart-item').find('.cart-item__price').text()),
             total = $(this).parents('.cart-item').find('.cart-item__total');
         total.text(numberWithSpaces(price * amount) + ' ₽');
-        totalCount()
+        totalCount();
     });
 
     function totalCount() {
         var totalPrice = 0;
-        var totalItems = $('.cart-item');
+        var totalItems = $('.cart-item').not('.removed');
         if (totalItems.length == 0) {
-            $('.total__price').text('0.000 ₽')
+            $('.total__price').text('0.000 ₽');
         } else {
-            for (let index = 0; index < totalItems.length; index++) {
-                const element = totalItems[index];
+            totalItems.each(function (index, element) {
                 totalPrice += replaceItem($(element).find('.cart-item__total').text());
-                $('.total__price').text(numberWithSpaces(totalPrice) + ' ₽')
-            }
+            });
+            $('.total__price').text(numberWithSpaces(totalPrice) + ' ₽');
         }
-    } totalCount()
+    }
+
+    totalCount();
+
+
 
 
     /*---------------------------------------------------end*/

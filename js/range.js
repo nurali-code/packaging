@@ -1,0 +1,10 @@
+function controlFromInput(e, l, t, o) { let [r, i] = getParsed(l, t); fillSlider(l, t, "#eee", "#7F9D87", o), r > i ? (e.value = i, l.value = i) : e.value = r } function controlToInput(e, l, t, o) { let [r, i] = getParsed(l, t); fillSlider(l, t, "#eee", "#19ad16", o), setToggleAccessible(t), r <= i ? (e.value = i, t.value = i) : t.value = r } function controlFromSlider(e, l, t) { let [o, r] = getParsed(e, l); fillSlider(e, l, "#eee", "#19ad16", l), o > r ? (e.value = r, t.value = r) : t.value = o } function controlToSlider(e, l, t) { let [o, r] = getParsed(e, l); fillSlider(e, l, "#eee", "#19ad16", l), setToggleAccessible(l), o <= r ? (l.value = r, t.value = r) : (t.value = o, l.value = o) } function getParsed(e, l) { let t = parseInt(e.value, 10), o = parseInt(l.value, 10); return [t, o] } function fillSlider(e, l, t, o, r) {
+    let i = l.max - l.min, n = e.value - l.min, u = l.value - l.min; r.style.background = `linear-gradient(
+    to right,
+    ${t} 0%,
+    ${t} ${n / i * 100}%,
+    ${o} ${n / i * 100}%,
+    ${o} ${u / i * 100}%, 
+    ${t} ${u / i * 100}%, 
+    ${t} 100%)`
+} function setToggleAccessible(e) { let l = document.querySelector("#toSlider"); 0 >= Number(e.value) ? l.style.zIndex = 2 : l.style.zIndex = 0 } const fromSlider = document.querySelector("#fromSlider"), toSlider = document.querySelector("#toSlider"), fromInput = document.querySelector("#fromInput"), toInput = document.querySelector("#toInput"); fillSlider(fromSlider, toSlider, "#eee", "#19ad16", toSlider), setToggleAccessible(toSlider), fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput), toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput), fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider), toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);

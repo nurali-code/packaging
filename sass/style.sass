@@ -4,6 +4,7 @@
 @import 'stars'
 @import 'header'
 @import 'modal'
+@import 'UI'
 
 .hero
     overflow: hidden
@@ -432,6 +433,8 @@ article
         margin: 0 0 30px
         &__img
             display: none
+            @media screen and ( max-width: 1200px )
+                display: block !important
 
         &__heading
             width: 38%
@@ -694,6 +697,7 @@ article
         width: 340px
         .dropdown
             &-btn
+                cursor: pointer
                 width: 100%
                 text-align: left
                 display: block
@@ -1682,12 +1686,16 @@ article
                 margin-bottom: 4px
 
             &__total
-                display: none
+                display: none !important
 
             &__delete
                 position: absolute
                 bottom: 0
                 right: 0
+
+            &.removed
+                padding: 10px 0
+                min-height: unset
 
         .total
             text-align: left
