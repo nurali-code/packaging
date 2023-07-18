@@ -272,7 +272,7 @@ $(document).ready(function () {
                 if ($li.length > 3) {
                     $li.slice(3).hide();
                     if (!$ul.next('.show-more').length) {
-                        $ul.after('<button class="show-more">Показать</button>');
+                        $ul.after('<button class="show-more">Ещё</button>');
                     }
                 }
             });
