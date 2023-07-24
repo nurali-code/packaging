@@ -113,13 +113,12 @@ $(document).ready(function () {
     function replaceItem(item) { return Number(item.replace(/[^0-9]/g, "")); }
     function numberWithSpaces(x) { return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") };
 
-
     $(document).on('click', '[data-modal="modal-click"]', function (e) {
         var pParent = $(this).parents('.card-content'),
             pAmount = pParent.find('.amount input').val();
 
         if (pParent.length === 0) {
-            pParent = $(this).parents('.product');
+            pParent = $(this).parents('.pdct');
             pAmount = 1;
         }
 
@@ -204,7 +203,7 @@ $(document).ready(function () {
         $('[data-tabContent="' + tabBtnValue + '"]').addClass('active');
         $('[data-tabContent]').not('[data-tabContent="' + tabBtnValue + '"]').removeClass('active');
         $('[data-tabBtn]').removeClass('active');
-        if ($(this).hasClass('product__link')) {
+        if ($(this).hasClass('pdct__link')) {
             $('html, body').animate({ scrollTop: $('[data-tabContent="' + tabBtnValue + '"]').offset().top - 100, }, 500,)
             $('[data-tabBtn="' + tabBtnValue + '"]').addClass('active');
         } else {
