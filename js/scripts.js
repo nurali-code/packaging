@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    /*---------------------------------------------------end*/
 
     $('.btn-menu').on('click', function () {
         $(this).toggleClass('active');
@@ -29,11 +28,11 @@ $(document).ready(function () {
     });
 
     /*---------------------------------------------------end*/
-    $('.amount button, .amount a').on('click', function (e) {
+    $('.amountCounter button, .amountCounter a').on('click', function (e) {
         e.preventDefault();
-        const inp = $(this).parent('.amount').children('input');
+        const inp = $(this).parent('.amountCounter').children('input');
         let count = inp.val();
-        if ($(this).hasClass('amount__add')) {
+        if ($(this).hasClass('amountCounter__add')) {
             count++;
         } else {
             count--;
@@ -43,6 +42,7 @@ $(document).ready(function () {
         }
         inp.val(count);
     });
+
     /*---------------------------------------------------end*/
 
     $('.sort-btn').click(function () {
@@ -115,39 +115,39 @@ $(document).ready(function () {
 
     $(document).on('click', '[data-modal="modal-click"]', function (e) {
         var pParent = $(this).parents('.card-content'),
-            pAmount = pParent.find('.amount input').val();
+            pamountCounter = pParent.find('.amountCounter input').val();
 
         if (pParent.length === 0) {
             pParent = $(this).parents('.pdct');
-            pAmount = 1;
+            pamountCounter = 1;
         }
 
         var pName = pParent.find('.p-name').text(),
             pPrice = replaceItem(pParent.find('.p-price').text());
 
-        console.log(pAmount);
+        console.log(pamountCounter);
 
         $('#modal-click .name').text(pName);
         $('#modal-click input[name="name"]').val(pName);
         $('#modal-click .price').text(numberWithSpaces(pPrice));
         $('#modal-click input[name="price"]').val(pPrice);
-        $('#modal-click .amount input').val(pAmount);
-        $('#modal-click .total').text(numberWithSpaces(replaceItem(pPrice) * pAmount) + ' ₽');
-        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(pPrice) * pAmount) + ' ₽');
+        $('#modal-click .amountCounter input').val(pamountCounter);
+        $('#modal-click .total').text(numberWithSpaces(replaceItem(pPrice) * pamountCounter) + ' ₽');
+        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(pPrice) * pamountCounter) + ' ₽');
     });
 
-    $(document).on('click', '#modal-click .amount a', function (e) {
-        var amount = $('#modal-click .amount input').val();
+    $(document).on('click', '#modal-click .amountCounter a', function (e) {
+        var amountCounter = $('#modal-click .amountCounter input').val();
         var price = $('#modal-click .price').text();
-        $('#modal-click .total').text(numberWithSpaces(replaceItem(price) * amount) + ' ₽');
-        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(price) * amount) + ' ₽');
+        $('#modal-click .total').text(numberWithSpaces(replaceItem(price) * amountCounter) + ' ₽');
+        $('#modal-click input[name="total"]').val(numberWithSpaces(replaceItem(price) * amountCounter) + ' ₽');
     });
 
     /*---------------------------------------------------end*/
 
     $(document).on('click', '.cart-item__delete', function (e) {
         var parentItem = $(this).parent('.cart-item');
-        parentItem.find('.amount, .cart-item__delete, .cart-item__price, .cart-item__total').addClass('hidden-element').hide();
+        parentItem.find('.amountCounter, .cart-item__delete, .cart-item__price, .cart-item__total').addClass('hidden-element').hide();
         parentItem.addClass('removed')
         if (window.innerWidth <= 1200) {
             parentItem.find('.cart-item__img, .cart-item__heading').addClass('hidden-element').hide();
@@ -171,10 +171,10 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.cart-item button', function (e) {
-        var amount = $(this).parents('.cart-item').find('input').val(),
+        var amountCounter = $(this).parents('.cart-item').find('input').val(),
             price = replaceItem($(this).parents('.cart-item').find('.cart-item__price').text()),
             total = $(this).parents('.cart-item').find('.cart-item__total');
-        total.text(numberWithSpaces(price * amount) + ' ₽');
+        total.text(numberWithSpaces(price * amountCounter) + ' ₽');
         totalCount();
     });
 
@@ -189,12 +189,7 @@ $(document).ready(function () {
             });
             $('.total__price').text(numberWithSpaces(totalPrice) + ' ₽');
         }
-    }
-
-    totalCount();
-
-
-
+    }    totalCount();
 
     /*---------------------------------------------------end*/
 
@@ -253,10 +248,7 @@ $(document).ready(function () {
                 ]
             });
             $('.tab-slider').slick('unslick');
-        } else {
-            // $('.tab-slider').slick('unslick');
-            // $('.tab-videos').slick('unslick');
-        }
+        } 
 
     });
 
@@ -542,12 +534,6 @@ $(document).ready(function () {
     };
 
     /*---------------------------------------------------end*/
-
-    // $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
-
-    /*---------------------------------------------------end*/
-
-
 
 });
 
