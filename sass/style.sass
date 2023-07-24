@@ -37,7 +37,7 @@
         width: 100%
         height: 100%
 
-.product
+.pdct
     width: 390px
     padding-bottom: 26px
     text-align: left
@@ -144,7 +144,7 @@
     &-slider
         max-width: 1440px
         overflow: hidden
-        .product
+        .pdct
             background-color: #fff
             margin: 0 32px
 
@@ -433,8 +433,8 @@ article
         margin: 0 0 30px
         &__img
             display: none
-            @media screen and ( max-width: 1200px )
-                display: block !important
+            @media screen and ( min-width: 700px )
+                display: none !important
 
         &__heading
             width: 38%
@@ -760,7 +760,7 @@ article
     .sort
         margin-bottom: 40px
 
-    .product
+    .pdct
         width: 32% !important
         background-color: #fff
         &-wrap
@@ -1026,7 +1026,7 @@ article
                 font-size: 22px
                 margin-bottom: 20px
 
-    .product
+    .pdct
         &-wrap
             gap: 40px 25px
 
@@ -1036,7 +1036,7 @@ article
             &::after
                 // box-shadow: 0 0 20px 30px #E2EDFF
                 box-shadow: 0 0 15px 9px #E2EDFF
-            .product
+            .pdct
                 margin: 0 12px
 
     .news
@@ -1089,7 +1089,7 @@ article
                 font-size: 14px
                 margin-bottom: 20px
 
-    .product
+    .pdct
         &:last-child
             display: none !important
 
@@ -1108,8 +1108,6 @@ article
             padding-left: 24px
             background-position: center left 6px
             background-size: 14px auto
-
-        .product
 
         &_big
             width: 280px
@@ -1159,10 +1157,10 @@ article
                 &-next
                     right: -40px
 
-        &:not(.product_big)
+        &:not(.pdct_big)
             width: 23%
             padding-bottom: 16px
-            .product
+            .pdct
                 &-img
                     padding: 10px
                     height: 142px
@@ -1181,6 +1179,7 @@ article
                     font-size: 10px
                     padding-right: 14px
                     background-size: 12px auto
+                    margin-bottom: 0
 
     .contact_us
         padding: 24px 0
@@ -1457,7 +1456,7 @@ article
             display: none
             margin-bottom: 20px
 
-        .product
+        .pdct
             padding-bottom: 8px
             &-img
                 span, p
@@ -1575,7 +1574,7 @@ article
             p
                 display: none
 
-    .product
+    .pdct
         &-mobSlider
             width: 100vw
             position: relative
@@ -1903,7 +1902,7 @@ article
         &-content
             width: 100%
 
-        .product
+        .pdct
             width: 49% !important
             &-wrap
                 gap: 16px 2%

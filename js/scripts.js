@@ -435,7 +435,7 @@ $(document).ready(function () {
         ]
     });
 
-    $('.product-mobSlider').slick({
+    $('.pdct-mobSlider').slick({
         dots: true,
         arrows: false,
         mobileFirst: true,
@@ -455,7 +455,7 @@ $(document).ready(function () {
         ]
     });
 
-    $('.product-slider').slick({
+    $('.pdct-slider').slick({
         dots: true,
         arrows: false,
         infinite: true,
