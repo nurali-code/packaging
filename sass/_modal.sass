@@ -173,6 +173,28 @@
                 font-size: 16px
                 margin-bottom: 12px
 
+    &#modal-success
+        display: block
+        p
+            margin: 0
+        img
+            max-width: 200px
+            display: inline-block
+        .modal
+            &-content
+                background-color: $third
+                padding: 60px 0 0
+                text-align: center
+
+            &-close
+                color: #fff
+                font-size: 28px
+
+            &-title
+                margin-top: 60px
+                background-color: #fff
+                padding: 30px 20px 40px
+
     @media screen and ( max-width: 1200px )
         &-content
             padding: 50px 30px 55px
@@ -253,6 +275,27 @@
                     font-size: 16px
                     display: block
                     margin-bottom: 8px
+
+        &#modal-success
+            img
+                max-width: 110px
+            .heading
+                font-size: 20px
+            .text
+                font-size: 12px
+            .modal
+                &-content
+                    max-width: 340px
+                    padding-top: 40px
+
+                &-close
+                    top: 14px
+                    right: 14px
+                    font-size: 19px
+
+                &-title
+                    margin-top: 40px
+                    padding: 20px 12px 30px
 
     @media screen and ( max-width: 700px )
         &-content
@@ -373,3 +416,4 @@
                 b
                     font-size: 14px
                     margin-bottom: 4px
+
