@@ -105,6 +105,7 @@
         padding: 20px 20px 0
 
     &__heading
+        text-align: left
         font-weight: 500
         font-size: 24px
         margin: 0 0 16px
@@ -361,8 +362,10 @@
 
 .path
     padding-top: 44px
-    a
+    &-item
         font-size: 20px
+        margin: 0
+        font-weight: normal
         display: inline-block
         vertical-align: middle
         color: rgba(31, 37, 40, 0.70)
@@ -372,12 +375,12 @@
             padding: 0 8px
             color: #000
 
-        &:first-of-type
+        &:first-child
             &::before
                 content: ''
                 display: none
 
-        &:last-of-type
+        &:last-child
             color: #000
             pointer-events: none
 
@@ -798,6 +801,8 @@ article
 
 .card
     text-align: left
+    h2
+        text-align: left
     .container
         z-index: unset
         align-items: flex-start
@@ -915,6 +920,7 @@ article
         margin-bottom: 20px
 
     &__subheading
+        font-weight: bold
         font-size: 20px
         margin-bottom: 12px
 
@@ -1264,7 +1270,7 @@ article
 
     .path
         padding-top: 16px
-        a
+        &-item
             font-size: 14px
 
     article
@@ -1631,7 +1637,7 @@ article
 
     .path
         padding-top: 12px
-        a
+        &-item
             font-size: 10px
             &::before
                 padding: 0 4px 0 0

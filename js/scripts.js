@@ -277,7 +277,7 @@ $(document).ready(function () {
         handleResponsive();
     });
 
-    $(document).on('click', '#modal-catalogue h3', function () {
+    $(document).on('click', '#modal-catalogue .item__heading', function () {
         if ($(window).width() < 700) {
             $(this).next('ul').slideToggle();
         }
