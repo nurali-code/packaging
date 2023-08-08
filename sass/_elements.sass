@@ -698,6 +698,68 @@ fieldset
         font-size: 18px
         margin: 0 0 10px
 
+.specify
+    color: $third !important
+    font-size: 20px
+    font-style: normal
+    font-weight: 500
+    line-height: 120%
+    position: relative
+    z-index: 100
+    display: block 
+    cursor: pointer
+    margin: 0
+    &::after
+        content: ''
+        display: inline-block
+        vertical-align: middle
+        width: 24px
+        height: 24px
+        background-repeat: no-repeat
+        background-position: center right
+        background-size: contain
+        margin-left: 3px
+        background-image: url('../img/icon-info.svg')
+
+    &-content
+        display: block
+        width: 100%
+        max-width: 250px
+        padding: 12px 30px 12px 12px
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        color: #1F2528
+        border-radius: 8px
+        border: 1px solid $third
+        background-color: #E2EDFF
+        position: absolute
+        top: 110%
+        left: -2%
+        z-index: 999
+        text-align: left
+        transform: translateY(-20px)
+        opacity: 0
+        visibility: hidden
+        transition: all ease .3s
+        &::before
+            content: '\00d7'
+            position: absolute
+            top: 5px
+            right: 8px
+            font-size: 28px
+            font-weight: normal
+            cursor: pointer
+
+        &.active
+            visibility: visible
+            transform: translateY(0)
+            opacity: 1
+
+    &:hover
+        opacity: 1
+
 @media screen and ( max-width: 1460px )
     .container
         max-width: 1220px
@@ -937,6 +999,12 @@ fieldset
         &__text
             font-size: 14px
 
+    .specify
+        font-size: 14px
+
+        &-content 
+            padding: 12px
+
 @media screen and ( max-width: 700px )
     .stars
         i
@@ -1095,3 +1163,10 @@ fieldset
                 display: block
                 li
                     width: 100%
+
+    .specify
+        font-size: 14px
+        &::after
+            width: 16px
+            height: 16px
+            margin-left: 1px

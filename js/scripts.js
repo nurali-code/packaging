@@ -6,6 +6,11 @@ $(document).ready(function () {
     })
 
     /*---------------------------------------------------end*/
+    $('.specify').on('click', function () {
+        $(this).children('.specify-content').toggleClass('active');
+    })
+
+    /*---------------------------------------------------end*/
     $('.search__inp').on('keyup', function (e) {
         if ($(this).val().length == 0) {
             $('.search__reset').fadeOut(200);
@@ -173,7 +178,7 @@ $(document).ready(function () {
     $(document).on('click', '.cart-item button', function (e) {
         var amountCounter = $(this).parents('.cart-item').find('input').val(),
             price = replaceItem($(this).parents('.cart-item').find('.cart-item__price').text()),
-            total = $(this).parents('.cart-item').find('.cart-item__total');
+            total = $(this).parents('.cart-item').not('.skip').find('.cart-item__total');
         total.text(numberWithSpaces(price * amountCounter) + ' ₽');
         totalCount();
     });
@@ -463,8 +468,8 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     arrows: true,
-                    centerMode: false,
-                    centerPadding: '30px',
+                    centerMode: true,
+                    centerPadding: '20px',
                     variableWidth: false,
                     dots: true
                 }
@@ -475,7 +480,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     arrows: true,
                     centerMode: false,
-                    centerPadding: '20px',
+                    centerPadding: '30px',
                     variableWidth: false,
                     dots: true
                 }

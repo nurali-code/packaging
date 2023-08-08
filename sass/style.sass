@@ -430,7 +430,11 @@ article
         display: flex
         justify-content: space-between
         align-items: center
+        position: relative
         margin: 0 0 30px
+        &:hover
+            z-index: 111
+            
         &__img
             display: none
             @media screen and ( min-width: 700px )
@@ -441,8 +445,20 @@ article
             font-size: 22px
             margin: 0
 
-        .amount
+        .specify
+            color: $prime !important
+            font-size: 18px
+            text-align: center
+            &::after
+                background-image: url('../img/icon-info_blue.svg')
+            &-content
+                left: auto
+                right: 0
+                width: 240px
 
+        &__price
+            .specify
+                display: none
         &__price,
         &__total
             margin: 0
@@ -798,6 +814,7 @@ article
 
 .card
     text-align: left
+
     .container
         z-index: unset
         align-items: flex-start
@@ -892,10 +909,31 @@ article
     &-content
         width: 41%
 
+        .specify
+            // font-size: 30px
+            &::after
+                // width: 30px
+                // height: 30px
+                // margin-left: 6px
+            &-content
+                min-width: 240px
+                right: 0
+                left: auto
+                top: 130%
+
         &__text
             margin: 0
             font-size: 22px
             font-weight: 400
+
+        .wrap
+            &-item
+                width: 49%
+                .card__price
+                    width: 100%
+                    margin: 20px 0
+                &:last-child
+                    text-align: right
 
     &-info
         padding: 60px 0
@@ -919,6 +957,7 @@ article
         margin-bottom: 12px
 
     ul
+        width: 100%
         padding: 0
         list-style: none
         margin: 0 0 12px
@@ -928,6 +967,7 @@ article
             background-image: url('../img/dots.svg')
             background-repeat: repeat-x
             background-position: center center
+            margin: 0
             &:last-child
                 margin-bottom: 0
 
@@ -963,7 +1003,7 @@ article
             font-weight: normal
             opacity: .7
 
-    .amount
+    .amountCounter
         vertical-align: middle
         display: inline-flex
         margin: 0 0 0 auto
@@ -1301,6 +1341,20 @@ article
                 height: 25px
                 background-size: 90% auto
 
+            .specify
+                font-size: 12px
+                &::after
+                    width: 14px
+                    height: 14px
+
+            &__price
+                .specify
+                    text-align: left
+                    display: block
+                    &-content
+                        left: 0
+                        max-width: 100%
+
             &__heading,
             &__price,
             &__total
@@ -1483,6 +1537,21 @@ article
                     &_outline
                         order: 3
 
+            .specify
+                font-size: 12px
+                &::after
+                    width: 16px
+                    height: 16px
+                    margin-left: 4px
+                &-content
+                    width: 100%
+                    font-size: 12px
+                    padding: 12px
+                    &::before
+                        top: 3px
+                        right: 6px
+                        font-size: 20px
+
     .card
         &-img
             width: 48%
@@ -1494,6 +1563,17 @@ article
             width: 48%
             &__text
                 font-size: 14px
+
+            .specify
+                display: block
+                width: 100%
+                font-size: 14px
+                &::after
+                    width: 12px
+                    height: 12px
+                    margin-left: 0px
+                &-content
+                    top: 110%
 
         &-slider
             order: 1
@@ -1575,6 +1655,9 @@ article
                 display: none
 
     .pdct
+        &__heading
+            font-size: 20px
+
         &-mobSlider
             width: 100vw
             position: relative
@@ -1591,7 +1674,7 @@ article
             max-width: 100%
             .slick
                 &-slide
-                    margin: 0 10px
+                    margin: 0 15px
 
                 &-prev
                     left: 20px

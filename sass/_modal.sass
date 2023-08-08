@@ -114,7 +114,7 @@ span.onsale
             color: $prime
             padding: 6px 20px
 
-    &#modal-click
+    &-click
         // display: block
         h2
             margin-bottom: 12px
@@ -141,6 +141,9 @@ span.onsale
                 max-width: 600px
 
         .inp-wrap
+            display: flex
+            align-items: center
+            gap: 8px 
             margin-bottom: 30px
             label
                 font-size: 16px
@@ -158,6 +161,12 @@ span.onsale
         .amountCounter
             display: inline-flex
             float: right
+            margin: 0 0 0 auto
+
+        .specify
+            &-content
+                min-width: 240px 
+
 
         .btn
             width: 100%
@@ -238,7 +247,7 @@ span.onsale
                 font-size: 14px
                 padding: 4px 14px
 
-        &#modal-click
+        &-click
             .modal
                 &-content
                     max-width: 512px
@@ -377,7 +386,7 @@ span.onsale
                 display: none
                 padding: 0 16px 14px
 
-        &#modal-click
+        &-click
             .modal
                 &-content
                     padding: 40px 20px

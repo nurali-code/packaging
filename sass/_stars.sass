@@ -42,9 +42,11 @@
         cursor: pointer
         color: #DFE3E4
 
-    input:checked ~ label:before
-        opacity: 1
-        color: #f1c40f
+    input
+        width: unset
+        &:checked ~ label:before
+            opacity: 1
+            color: #f1c40f
 
     &:hover input ~ label:before
         opacity: 0

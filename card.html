@@ -144,18 +144,38 @@
                     <button class="pdct__link" data-tabBtn="3">Все характеристики</button>
                 </div>
                 <div class="wrap">
-                    <span class="card__price">
-                        <span class="p-price">1500 ₽</span> <s>2500 ₽ </s>
-                    </span>
-                    <div class="amountCounter">
-                        <button class="amountCounter__remove">–</button>
-                        <input type="text" value="10">
-                        <button class="amountCounter__add">+</button>
+                    <ul class="wrap-item">
+                        <li>
+                            <b>От 1 шт</b> <i>56,42 ₽ </i>
+                        </li>
+                        <li>
+                            <b>От 10 шт</b> <i>46,42 ₽ </i>
+                        </li>
+                        <li>
+                            <b>От 50 шт</b> <i>36,42 ₽ </i>
+                        </li>
+                    </ul>
+                    <div class="wrap-item">
+                        <div class="amountCounter">
+                            <button class="amountCounter__remove">–</button>
+                            <input type="text" value="10">
+                            <button class="amountCounter__add">+</button>
+                        </div>
+                        <p class="card__price">
+                            <span class="specify">
+                                Уточнить цену
+                                <span class="specify-content">
+                                    Наличие и цены уточняйте <br>
+                                    у менеджеров через заявку <br>
+                                    или звонок.
+                                </span>
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <div class="wrap">
                     <button class="btn">В корзину</button>
-                    <button class="btn btn_second" data-modal="modal-click">Купить сейчас</button>
+                    <button class="btn btn_second" data-modal="modal-click2">Купить сейчас</button>
                 </div>
             </div>
             <div class="card-info">
@@ -366,8 +386,17 @@
                     <img src="img/product-1.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Гибкая упаковка</p>
-                    <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
+                    <p class="p-name pdct__heading">Гибкая упаковка</p>
+                    <p class="pdct__price">
+                        <span class="specify">
+                            Уточнить цену
+                            <span class="specify-content">
+                                Наличие и цены уточняйте
+                                у менеджеров через заявку
+                                или звонок.
+                            </span>
+                        </span>
+                    </p>
                     <a href="#" class="pdct__list">Печать БОПП</a>
                     <a href="#" class="pdct__list">Печать с ламинацией</a>
                     <a href="#" class="pdct__list">Продажа и резка пленки БОПП</a>
@@ -375,7 +404,7 @@
                 <div class="wrap">
                     <button class="sm btn">В корзину</button>
                     <a href="#" class="sm btn btn_outline">Подробнее</a>
-                    <button class="sm btn btn_second" data-modal="modal-click">Купить в 1 клик</button>
+                    <button class="sm btn btn_second" data-modal="modal-click2">Купить в 1 клик</button>
                 </div>
             </div>
             <div class="pdct pdct_big">
@@ -385,7 +414,7 @@
                     <img src="img/product-2.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Пакеты</p>
+                    <p class="p-name pdct__heading">Пакеты</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Фасовочные пакеты</a>
                     <a href="#" class="pdct__list">Флексопечать по ПВД</a>
@@ -403,7 +432,7 @@
                     <img src="img/product-3.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Самоклеющаяся этикетка</p>
+                    <p class="p-name pdct__heading">Самоклеющаяся этикетка</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Все виды этикеток</a>
                     <a href="#" class="pdct__list">Наклейки, стикеры</a>
@@ -421,7 +450,7 @@
                     <img src="img/product-4.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Бумажные и крафт-пакеты</p>
+                    <p class="p-name pdct__heading">Бумажные и крафт-пакеты</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Пакеты для строительных смесей</a>
                     <a href="#" class="pdct__list">Пакеты для угля</a>
@@ -440,7 +469,7 @@
                     <img src="img/product-5.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Гофротара</p>
+                    <p class="p-name pdct__heading">Гофротара</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Четырехклапанные короба</a>
                     <a href="#" class="pdct__list">Короба со сложной высечкой</a>
@@ -459,7 +488,7 @@
                     <img src="img/product-6.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Бумажная тара</p>
+                    <p class="p-name pdct__heading">Бумажная тара</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Картонные втулки (гильзы, шпули)</a>
                     <a href="#" class="pdct__list">Бумажные стаканчики</a>
@@ -478,7 +507,7 @@
                     <img src="img/product-7.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Ролевая печать</p>
+                    <p class="p-name pdct__heading">Ролевая печать</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Печать листовок</a>
                     <a href="#" class="pdct__list">Работа на давальческом сырье</a>
@@ -495,7 +524,7 @@
                     <img src="img/product-8.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Ламинатная туба</p>
+                    <p class="p-name pdct__heading">Ламинатная туба</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Офсетные этикетки</a>
                     <a href="#" class="pdct__list">Печать тубного ламината</a>
@@ -512,7 +541,7 @@
                     <img src="img/product-9.jpg" alt="product">
                 </div>
                 <div class="pdct-title">
-                    <p class="p-name product__heading">Печать этикеток защиты</p>
+                    <p class="p-name pdct__heading">Печать этикеток защиты</p>
                     <p class="pdct__price">Цена <i class="p-price">1500 ₽</i></p>
                     <a href="#" class="pdct__list">Продажа комплектующих</a>
                     <a href="#" class="pdct__list">Печать наклеек</a>
@@ -684,7 +713,7 @@
         </div>
     </div>
 
-    <div class="modal" id="modal-click">
+    <div class="modal modal-click" id="modal-click">
         <div class="modal-content">
             <button class="modal-close">&#x2715;</button>
             <h2>Быстрый заказ</h2>
@@ -706,6 +735,54 @@
                 <div class="inp-wrap">
                     <label>Итог: <span class="total">15000 ₽</span></label>
                     <input type="hidden" name="total">
+                </div>
+                <fieldset>
+                    <label>Ваше ФИО <i>*</i></label>
+                    <input type="text" required="" placeholder="Иванов Иван Сергеевич">
+                </fieldset>
+                <fieldset>
+                    <label>Ваш телефон <i>*</i></label>
+                    <input type="tel" required="" placeholder="+7 900 000 0000">
+                </fieldset>
+                <fieldset>
+                    <label>Текст отзыва <i>*</i></label>
+                    <textarea required="" name="address" rows="4" placeholder="Текст"></textarea>
+                </fieldset>
+                <p class="required">
+                    <b><i>*</i> Обязательно для заполнения</b>
+                    Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных.</a>
+                </p>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal-click" id="modal-click2">
+        <div class="modal-content">
+            <button class="modal-close">&#x2715;</button>
+            <h2>Быстрый заказ</h2>
+            <p class="descr">Заполните форму и мы вам перезвоним</p>
+            <form action="#">
+                <div class="inp-wrap">
+                    <label>Товар: <span class="name">Картонная коробка 600х400х400 мм</span></label>
+                    <input type="hidden" name="name">
+                </div>
+                <div class="inp-wrap">
+                    <label>Цена:
+                    </label>
+                    <span class="specify">
+                        Уточнить цену
+                        <span class="specify-content">
+                            Наличие и цены уточняйте <br>
+                            у менеджеров через заявку <br>
+                            или звонок.
+                        </span>
+                    </span>
+                    <div class="amountCounter">
+                        <a href="#" class="amountCounter__remove">–</a>
+                        <input type="text" value="1">
+                        <a href="#" class="amountCounter__add">+</a>
+                    </div>
                 </div>
                 <fieldset>
                     <label>Ваше ФИО <i>*</i></label>
