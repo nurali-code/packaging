@@ -360,25 +360,15 @@
             display: block
             filter: grayscale(10)
 
-.path
+.woocommerce-breadcrumb
     padding-top: 44px
-    &-item
+    a, h1,h2,h3
         font-size: 20px
         margin: 0
         font-weight: normal
         display: inline-block
         vertical-align: middle
         color: rgba(31, 37, 40, 0.70)
-        &::before
-            content: '|'
-            display: inline-block
-            padding: 0 8px
-            color: #000
-
-        &:first-child
-            &::before
-                content: ''
-                display: none
 
         &:last-child
             color: #000
@@ -437,7 +427,7 @@ article
         margin: 0 0 30px
         &:hover
             z-index: 111
-            
+
         &__img
             display: none
             @media screen and ( min-width: 700px )
@@ -1308,7 +1298,7 @@ article
             padding-right: 10px
             background-size: auto 10px
 
-    .path
+    .woocommerce-breadcrumb
         padding-top: 16px
         &-item
             font-size: 14px
@@ -1321,7 +1311,7 @@ article
 
     .cart
         padding: 20px 0 40px
-        .path
+        .woocommerce-breadcrumb
             padding: 16px 0
 
         &__clear
@@ -1718,7 +1708,7 @@ article
         &-wrap
             gap: 20px 2%
 
-    .path
+    .woocommerce-breadcrumb
         padding-top: 12px
         &-item
             font-size: 10px
@@ -1740,7 +1730,7 @@ article
         padding-top: 54px
         .container
             position: static
-        .path
+        .woocommerce-breadcrumb
             display: none
 
         &-header
@@ -1823,7 +1813,7 @@ article
                 max-width: 400px
 
     .ordering
-        .path
+        .woocommerce-breadcrumb
             display: none
         .wrap
             &-title
