@@ -6,7 +6,7 @@ $(document).ready(function () {
     })
 
     /*---------------------------------------------------end*/
-    $('.specify').on('click', function () {
+    $(document).on('click', '.specify', function () {
         $(this).children('.specify-content').toggleClass('active');
     })
 
@@ -20,6 +20,7 @@ $(document).ready(function () {
             $('.search-content').slideDown(200);
         }
     });
+
     $('.search__reset').on('click', function (e) {
         $(this).fadeOut(200);
         $('.search-content').slideUp(200);
